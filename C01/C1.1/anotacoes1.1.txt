@@ -1,6 +1,3 @@
-PREV: C01.1 - P31
-NEXT: c01.1 - P34 Objective review
-
 HTML5 - Semantica
     Os novos elementos semânticos HTML5 (com exceção do elemento <progress>), não fornecem qualquer padrão ou comportamento alterado, mas fornecem uma definição para suas páginas. O objetivo desses elementos é substituir a utilização de <div> para todas as funções.
 

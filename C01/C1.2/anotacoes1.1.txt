@@ -1,0 +1,6 @@
+
+
+DOM
+    - É uma representação da estrutura da página HTML que você pode interagir programaticamente.
+    - Permite adicionar, excluir ou modificar elementos para alterar seu comportamento, layout, aparência e conteúdo.
+    
