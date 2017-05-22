@@ -1,0 +1,67 @@
+PREV: C01.1 - P31
+NEXT: c01.1 - P34 Objective review
+
+HTML5 - Semantica
+    Os novos elementos semânticos HTML5 (com exceção do elemento <progress>), não fornecem qualquer padrão ou comportamento alterado, mas fornecem uma definição para suas páginas. O objetivo desses elementos é substituir a utilização de <div> para todas as funções.
+
+<header>
+    - Fornecem a capacidade de definir o conteúdo do cabeçalho da página.
+    - Header pode ser usado para início da página, <section> ou <article>.
+    - É destinado a conter um elemento H1-H6, mas pode conter outros elementos como <nav> ou <hgroup>.
+
+<footer>
+    - Fornecem a capacidade de definir o conteúdo do rodapé da página.
+
+<nav>
+    - Usado para navegar nas principais páginas da aplicação, contendo uma lista de links.
+
+<hgroup>
+    - Organiza e agrupa cabeçalhos ou subtarefas em sequencia.
+    - Normalmente contém H1-H6.
+
+<article>
+    - Composição completa ou entrada completa, como artigo de revista ou post do blog, onde o conteúdo pode ser redistribuído e não perder o seu significado, ou seja, é independente.
+    - Você pode usar sub-artigos, mas devem ser extensões e relacionados com o artigo raiz.
+    - Normalmente seu primeiro elemento é um cabeçalho ou grupo de cabeçalho.
+
+<section>
+    - Subdivide as páginas em seções, mas sua finalidade não é dividir a página em detalhes mais detalhados.
+    - Um <article> pode conter zero ou mais elementos <section> para dividir as seções dentro do seu conteúdo.
+    - Normalmente seu primeiro elemento é um cabeçalho ou grupo de cabeçalho.
+
+<aside>
+    - Define qualquer conteúdo que não se relacione com o fluxo principal do conteúdo da página atual (Barra lateral, alerta, anúncio).
+    - Define semanticamente uma seção de textos ou gráficos aparte.
+
+<figcaption> e <figure>
+    - Fornecem os elementos semânticos para adicionar gráficos e figuras a página.
+    - Esses gráficos ou imagem possuem uma representação textual do conteúdo exibido.
+
+<progress>
+    - Representa o progresso de um objetivo ou tarefa.
+    - Possui dois atributos principais:
+        - value que indica o valor ou posição atual;
+        - max que indica o valor máximo possível para o elemento;
+    - Existem dois tipos de tarefas:    
+        - Determinado: sabe antecipadamente a quantidade de trabalho que será realizada, ou seja, valor inicial e final (download arquivo);
+        - Indeterminado: não sabe quanto tempo uma tarefa levará para concluir, ou seja, não tem valor inicial e final (request API). Portanto não atributo value;
+
+<mark>
+    - Pode facilmente destacar ou enfatizar facilmente informações importantes, como um highlighter.
+
+<div> (Elementos de container)
+    - São frequentemente usados para dividir a página em várias seções para criar o layout.
+    - O principal problema com o uso de <div> para estruturar o documento é sua incapacidade de transmitir significado semântico para cada seção.
+    - Permite uma capacidade mais dinâmica no layout da página.
+
+<table>
+    - Tem uma natureza estática de estrutura, sendo usado para um layout estático declarado diretamente na página HTML.
+
+SEO
+    - É uma técnica usada para tornar os elementos do site facilmente descobertos e devidamente indexados pelos motores de busca.
+    - A marcação semantica permite usar elementos mais descritivos para as seções da página, permitindo aos motores de busca encontrar o conteudo da pagina.
+    - Os elementos <article> e <section> são os principais utilizados pelo algoritmo SEO, pois são conhecidos por conter o corpo principal da página.
+
+Screen readers
+    - Contam com o esboço do documento para analisar a estrutura e apresentar as informações ao usuário.
+    - Podem ler o texto na página e convertê-lo em audio por meio de um algoritmo de texto para fala.

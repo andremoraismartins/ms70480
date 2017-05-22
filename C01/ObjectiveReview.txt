@@ -1,0 +1,4 @@
+1.d. input -> Correto
+2.a. <h1> to <h6> -> Correto
+3.b. <header>Company News</header> -> Incorreto 3.c.
+4.c. <table> -> Correto
