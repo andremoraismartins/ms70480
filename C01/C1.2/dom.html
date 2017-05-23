@@ -6,12 +6,53 @@
 		<script>
 			window.onload = function(){
 				var elementById = document.getElementById("outerDiv");
-				console.log("outerDiv", elementById);
+				console.log("BY ID:", elementById);
+				
 				var elementsByTagName = document.getElementsByTagName("p");
-				console.log("paragraphs count", elementsByTagName.length);
+				console.log("BY TAG NAME: ", elementsByTagName.length, elementsByTagName);
 				for(var e in elementsByTagName){
-					console.log("paragraph", e);	
+					console.log(e);	
 				}
+
+				var elementsByClass = document.getElementsByClassName("subPara");
+				console.log("BY CLASS NAME: ", elementsByClass.length, elementsByClass);
+				for(var e in elementsByClass){
+					console.log(e);
+				}
+
+				var queryAll = document.querySelectorAll("p");
+				console.log("QUERY SELECTOR ALL: ", queryAll);
+				for(var e in queryAll){
+					console.log(e);
+				}
+
+				var query = document.querySelector("#outerDiv");
+				console.log("QUERY SELECTOR: ", query);
+
+				var remove = document.getElementById("innerDivToRemove");
+				console.log(remove);
+				document.getElementById("outerDiv").removeChild(remove);
+				var removed = document.getElementById("innerDivToRemove");
+				console.log(removed);
+
+				var outerDiv = document.getElementById("outerDiv"),
+					newArticle1 = document.createElement("article");
+				newArticle1.innerText = "My new \<article> element";
+				outerDiv.appendChild(newArticle1);
+
+				var newArticle2 = document.getElementById("outerDiv")
+					.appendChild(document.createElement("article"));
+				newArticle2.innerText = "My new \<article> element 2";
+				
+				var newArticle3 = document.getElementById("outerDiv").insertBefore(
+					document.createElement("article"),
+					document.getElementById("innerDiv")
+				);
+				newArticle3.innerText = "My new <article> element 3";
+
+				var inner = document.getElementById("innerDiv");
+				var newArticle4 = inner.insertBefore(document.createElement("article"), inner.firstChild);
+				newArticle4.innerText = "My new <article> element 4";
 			}
 		</script>
 	</head>
@@ -25,6 +66,12 @@
 				<li>Fourth List Item</li>
 			</ul>
 			<div id="innerDiv">
+				<p class='subPara' id='P1'>Paragraph 1</p>
+				<p class='subPara' id='P2'>Paragraph 2</p>
+				<p class='subPara' id='P3'>Paragraph 3</p>
+				<p class='subPara' id='P4'>Paragraph 4</p>
+			</div>
+			<div id="innerDivToRemove">
 				<p class='subPara' id='P1'>Paragraph 1</p>
 				<p class='subPara' id='P2'>Paragraph 2</p>
 				<p class='subPara' id='P3'>Paragraph 3</p>

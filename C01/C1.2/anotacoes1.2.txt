@@ -1,13 +1,32 @@
-
+PREV: P45
 
 DOM
     - É uma representação da estrutura da página HTML que você pode interagir programaticamente.
     - Permite adicionar, excluir ou modificar elementos para alterar seu comportamento, layout, aparência e conteúdo.
     - É essencialmente uma coleção de nós dispostos em uma árvore, onde todos se relacionam uns com os outros.
 	- Os nós são uma grande família feliz de crianças, irmãos, pais, avós, Netos..., sendo essa a essência de uma árvore de família.
+
+Selecionando DOM
 	- Opções para usar JS e acessar o DOM, através do document ou através de uma referência de um elemento:
 		- getElementById: Um elemento com o atributo exclusivo id. Retorna null se não encontrar.
 		- getElementsByClassName: Todos os elementos com o atributo comum class.
 		- getElementsByTagName: Todos os elementos com a tag ou nome do elemento.
 		- querySelector: Primeiro elemento filho encontrado com o selector CSS.
 		- querySelectorAll: Todos os elementos filhos encontrados com o selector CSS.
+
+Excluindo DOM
+	- Quando você remove um elemento da DOM, não é possível recuperá-lo. Ao invés disso, você pode escondê-lo e assim voltar a usá-lo no futuro.
+	- removeChild: remove um elemento filho, recebe o elemento a ser removido (é obrigatório que seja filho) e retorna uma referência ao elemento removido.
+	- removeNode: remove o nó selecionado, recebe boleano se deseja remover os filhos do nó e retorna uma referência ao elemento removido.
+
+Inserindo DOM
+	- createElement: cria o elemento na DOM para uso na página, mas não o deixa vísivel.
+	- appendChild: adiciona o novo elemento ao final da lista de filhos do contentor de chamada e retorna uma referencia ao nó recem adicionado.
+	- insertBefore: recebe dois parâmetros, o elemento que será inserido e o elemento que será utilizado para inserir o novo elemento antes.
+	- EXISTEM NÓS, COMO <img>, QUE NÃO PERMITE A INSERÇÃO DE FILHOS.
+
+Propriedades de um elemento DOM
+	- childNodes: referencia aos nós filhos deste elemento.
+	- firstChild: referencia ao primeiro filho deste elemento.
+	- lastChild: referencia ao ultimo filho deste elemento.
+	- hasChildNodes: booleano que retorna se este elemento tem ou não filhos.
