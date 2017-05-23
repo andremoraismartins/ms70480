@@ -1,0 +1,13 @@
+
+
+DOM
+    - É uma representação da estrutura da página HTML que você pode interagir programaticamente.
+    - Permite adicionar, excluir ou modificar elementos para alterar seu comportamento, layout, aparência e conteúdo.
+    - É essencialmente uma coleção de nós dispostos em uma árvore, onde todos se relacionam uns com os outros.
+	- Os nós são uma grande família feliz de crianças, irmãos, pais, avós, Netos..., sendo essa a essência de uma árvore de família.
+	- Opções para usar JS e acessar o DOM, através do document ou através de uma referência de um elemento:
+		- getElementById: Um elemento com o atributo exclusivo id. Retorna null se não encontrar.
+		- getElementsByClassName: Todos os elementos com o atributo comum class.
+		- getElementsByTagName: Todos os elementos com a tag ou nome do elemento.
+		- querySelector: Primeiro elemento filho encontrado com o selector CSS.
+		- querySelectorAll: Todos os elementos filhos encontrados com o selector CSS.
