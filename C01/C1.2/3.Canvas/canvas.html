@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <style>
+            canvas {
+                border: 1px solid black;
+            }
+        </style>
+        <script>
+            window.onload = function(){
+                lines();
+                arcs();
+                quads();
+                beziers();
+            }
+            function lines(){
+                var surface = document.getElementById("lineSurface");
+                var ctxt = surface.getContext("2d");
+                ctxt.beginPath();
+                ctxt.moveTo(100, 100);
+                ctxt.lineTo(225, 350);
+                ctxt.lineTo(300, 10);
+                ctxt.lineTo(400, 350);
+                ctxt.lineWidth = 5;
+                ctxt.strokeStyle = '#000';
+                ctxt.lineCap = 'round';
+                ctxt.stroke();
+            }
+            function arcs(){
+                var ctxt = document.getElementById("arcSurface").getContext("2d");
+                ctxt.beginPath();                
+                ctxt.arc(
+                    150, // X para o centro do círculo
+                    100, // Y para o centro do círculo
+                    75, // Raio do círculo
+                    0, // Angulo inicial em radianos
+                    1.99 * Math.PI, // Angulo final em radianos
+                    false // Direção do desenho (True = Anti-horário, False=Horário)
+                );
+                ctxt.lineWidth = 25;
+                ctxt.strokeStyle = 'green';
+                ctxt.stroke();
+
+                ctxt.beginPath();
+                ctxt.arc(450, 100, 75, 1.5 * Math.PI, 2 * Math.PI, false);
+                ctxt.lineWidth = 25;
+                ctxt.strokeStyle = 'blue';
+                ctxt.stroke();
+
+                ctxt.beginPath();
+                ctxt.arc(150, 300, 75, 1 * Math.PI, 1.5 * Math.PI, false);
+                ctxt.lineWidth = 25;
+                ctxt.strokeStyle = 'black';
+                ctxt.stroke();
+
+                ctxt.beginPath();
+                ctxt.arc(450, 300, 75, .5 * Math.PI, 1 * Math.PI, false);
+                ctxt.lineWidth = 25;
+                ctxt.strokeStyle = 'red';
+                ctxt.stroke();
+            }
+            function quads(){
+                var ctxt = document.getElementById("quadArcSurface").getContext("2d");
+                ctxt.beginPath();
+                ctxt.moveTo(10,380);
+                ctxt.quadraticCurveTo(
+                    300, // X da posição para esticar a curva
+                    -350, // Y da posição para esticar a curva
+                    580, // X do ponto final
+                    380 // Y do ponto final
+                );
+                ctxt.lineWidth = 25;
+                ctxt.strokeStyle = 'red';
+                ctxt.stroke();
+            }
+            function beziers(){
+                var ctxt = document.getElementById("bezierSurface").getContext("2d");
+                ctxt.beginPath();
+                ctxt.moveTo(300, 0);
+                ctxt.bezierCurveTo(
+                    -450, // X do primeiro ponto de controle
+                    100, // Y do primeiro ponto de controle
+                    800, // X do segundo ponto de controle
+                    300, // Y do segundo ponto de controle
+                    0, // X do ponto final 
+                    400 // Y do ponto final 
+                );
+                ctxt.lineWidth = 5;
+                ctxt.strokeStyle = '#f00';
+                ctxt.stroke();
+            }
+        </script>
+    </head>
+    <body>
+        <canvas id="lineSurface" width="600" height="400">
+            Your browser does not support HTML5.
+        </canvas>
+        <canvas id="arcSurface" width="600" height="400">
+            Your browser does not support HTML5.
+        </canvas>
+        <canvas id="quadArcSurface" width="600" height="400">
+            Your browser does not support HTML5.
+        </canvas>        
+        <canvas id="bezierSurface" width="600" height="400">
+            Your browser does not support HTML5.
+        </canvas>
+    </body>
+</html>

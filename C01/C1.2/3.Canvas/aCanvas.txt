@@ -1,0 +1,30 @@
+TRAD: 39
+EXAM: 60
+
+<canvas>
+    - Novo elemento do html5, é uma tela em branco na qual é possível desenhar linhas, textos, imagens e manipulá-las dinamicamente com JS.
+    - É similar ao elemento <div>, porem é um conteiner para elementos gráficos em opsição a elementos baseados em texto.
+    - Basta definir a tag e especificar o tamanho, podendo inserir uma mensagem dentro da tag que será exibida caso o navegador não suporte canvas.
+    - O canvas usa um sistema de coordenadas (x,y) onde (0,0) corresponde ao canto superior esquerdo e (width,heigth) ao canto inferior direito.
+
+<canvas>.getContext("2d")
+    - Fornece os métodos e propriedades para desenhar no canvas.
+
+Desenhando linhas no contexto
+    - Métodos:
+        - beginPath(): Reinicia / inicia um novo caminho de desenho;
+        - moveTo(x,y); move o contexto para o ponto definido no método beginPath;
+        - lineTo(x,y): define o ponto final de destino para a linha;
+        - stroke(): traça a linha, torna a linha visível;
+    - Propriedades:
+        - lineWidth: largura da linha (5);
+        - strokeStyle: cor da linha em rgb, hexadecimais ou nomes (#0f0);
+        - lineCap: controla como o final da linha será renderizado (round).
+
+Desenhando curvas no contexto
+    - Métodos:
+        - arc(): círculo padrão baseado em um ângulo inicial e final e um raio.
+        - quadradicCurveTo(): arco permitindo controlar a inclinação da curva que é distribuída uniformimente entre as extremidades.
+        - bezierCurveTo(): arco complexo que pode inclinar e recebe três coordenadas.
+    - Propriedades:
+        - lineWidth, strokeStyle, lineCap, como nas linhas.

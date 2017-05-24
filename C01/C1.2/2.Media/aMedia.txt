@@ -1,0 +1,22 @@
+<video>
+    - Cada navegador suporta determinados tipos de vídeos e por isso é necessário disponibilizar mais de um <source> de mais um tipo e ainda assim informar uma mensagem caso não sejam suportados.
+    - Este elemento suporta diversos <sources> filhos, sendo que o navegador passa pelos <source> de cima para baixo e reproduz o primeiro suportado.
+    - Se o navegador não suportar vídeo, pula direto para o elemeto <object>
+
+<source>
+    - Fonte de dados para o elemento <video>
+    - src: local do vídeo.
+    - type: tipo do vídeo.
+
+<object>
+    - Elemento que é exibido quando nenhum dos vídeos é suportado.
+
+<video> JS
+    - video.play(): reproduz o vídeo a partir da posição atual.
+    - video.pause(): pausa o vídeo na posição atual.
+    - video.volume: permite controlar o volume do vídeo.
+    - currentTime: representa a posição atual do vídeo, podendo adicionar ou remover para avançar ou retroceder o vídeo.
+
+<audio>
+    - É como o vídeo, possuindo os mesmos atributos e métodos do vídeo, porém não ocupa espaço na tela.
+    - Não possui as propriedades de altura e largura.
