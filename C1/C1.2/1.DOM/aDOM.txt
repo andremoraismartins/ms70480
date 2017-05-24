@@ -1,5 +1,3 @@
-PREV: P45
-
 DOM
     - É uma representação da estrutura da página HTML que você pode interagir programaticamente.
     - Permite adicionar, excluir ou modificar elementos para alterar seu comportamento, layout, aparência e conteúdo.
@@ -24,6 +22,11 @@ Inserindo DOM
 	- appendChild: adiciona o novo elemento ao final da lista de filhos do contentor de chamada e retorna uma referencia ao nó recem adicionado.
 	- insertBefore: recebe dois parâmetros, o elemento que será inserido e o elemento que será utilizado para inserir o novo elemento antes.
 	- EXISTEM NÓS, COMO <img>, QUE NÃO PERMITE A INSERÇÃO DE FILHOS.
+
+Alterando DOM
+	- Substituir um elemento de destino por um elemento completamente novo.
+	- replaceChild: 
+	- replaceNode:
 
 Propriedades de um elemento DOM
 	- childNodes: referencia aos nós filhos deste elemento.

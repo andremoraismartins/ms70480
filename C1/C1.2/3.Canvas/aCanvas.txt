@@ -1,6 +1,3 @@
-TRAD: 39
-EXAM: 60
-
 <canvas>
     - Novo elemento do html5, é uma tela em branco na qual é possível desenhar linhas, textos, imagens e manipulá-las dinamicamente com JS.
     - É similar ao elemento <div>, porem é um conteiner para elementos gráficos em opsição a elementos baseados em texto.

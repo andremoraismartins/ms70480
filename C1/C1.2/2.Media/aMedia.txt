@@ -2,6 +2,12 @@
     - Cada navegador suporta determinados tipos de vídeos e por isso é necessário disponibilizar mais de um <source> de mais um tipo e ainda assim informar uma mensagem caso não sejam suportados.
     - Este elemento suporta diversos <sources> filhos, sendo que o navegador passa pelos <source> de cima para baixo e reproduz o primeiro suportado.
     - Se o navegador não suportar vídeo, pula direto para o elemeto <object>
+    - src: especifica o vídeo a ser reproduzido, sendo um arquivo local ou uma URL.
+    - autoplay: diz ao navegador para começar a reproduzir o vídeo assim que ele é carregado.
+    - controls: diz ao navegador para incluir seus controles de vídeo embutidos, como play e pausa. 
+    - height/width: controlam a quantidade de espaço que o vídeo ocupará na página, se não for definido será o tamanho original.
+    - loop: indica ao navegador para reproduzir continuamente o vídeo.
+    - poster: imagem a ser exibida no local do vídeo até o início da reprodução.
 
 <source>
     - Fonte de dados para o elemento <video>
