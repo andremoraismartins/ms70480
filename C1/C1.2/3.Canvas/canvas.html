@@ -14,6 +14,9 @@
                 arcs();
                 quads();
                 beziers();
+                path();
+                rect();
+                gradient();
             }
             function lines(){
                 var surface = document.getElementById("lineSurface");
@@ -91,6 +94,63 @@
                 ctxt.strokeStyle = '#f00';
                 ctxt.stroke();
             }
+            function path(){
+                var ctxt = document.getElementById("pathSurface").getContext("2d");
+                ctxt.beginPath();
+                ctxt.arc(300, 200, 75, 1.75 * Math.PI, 1.25 * Math.PI, false);
+                ctxt.lineTo(150, 125);
+                ctxt.quadraticCurveTo(300, 0, 450, 125);
+                ctxt.lineTo(353, 144);
+                ctxt.strokeStyle = "blue";
+                ctxt.lineCap = "round";
+                ctxt.lineWidth = 10;
+                ctxt.fillStyle = "Green";
+                ctxt.fill();
+                ctxt.stroke();
+            }
+            function rect(){
+                var ctxt = document.getElementById("rectSurface").getContext("2d");
+                ctxt.beginPath();
+                ctxt.rect(300, 200, 150, 75);
+                ctxt.stroke();
+                ctxt.beginPath();
+                var x, y;
+                x = 150;
+                y = 75;
+                ctxt.rect(300 - (x/2), 200 - (y/2), x, y);
+                ctxt.stroke();
+            }
+            function gradient(){
+                var ctxt = document.getElementById("gradientSurface").getContext("2d");
+                ctxt.beginPath();
+                ctxt.lineWidth = 3;
+                ctxt.rect(0, 0, 150, 125);
+                var gradient = ctxt.createLinearGradient(150, 150, 200, 125);
+                gradient.addColorStop(0, "Black");
+                gradient.addColorStop(0.5, "Gray");
+                gradient.addColorStop(1, "White");
+                ctxt.fillStyle = gradient;
+                ctxt.fill();
+                ctxt.stroke();
+
+                ctxt.beginPath();
+                ctxt.lineWidth = 3;
+                ctxt.rect(150, 150, 250, 175);
+                var gradient = ctxt.createRadialGradient(
+                    200, // X centro
+                    200, 
+                    5, 
+                    250, 
+                    250, 
+                    100
+                );
+                gradient.addColorStop(0, "Red");
+                gradient.addColorStop(.5, "Orange");
+                gradient.addColorStop(1, "Blue");
+                ctxt.fillStyle = gradient;
+                ctxt.fill();
+                ctxt.stroke();
+            }
         </script>
     </head>
     <body>
@@ -104,6 +164,15 @@
             Your browser does not support HTML5.
         </canvas>        
         <canvas id="bezierSurface" width="600" height="400">
+            Your browser does not support HTML5.
+        </canvas>
+        <canvas id="pathSurface" width="600" height="400">
+            Your browser does not support HTML5.
+        </canvas>
+        <canvas id="rectSurface" width="600" height="400">
+            Your browser does not support HTML5.
+        </canvas>
+        <canvas id="gradientSurface" width="600" height="400">
             Your browser does not support HTML5.
         </canvas>
     </body>

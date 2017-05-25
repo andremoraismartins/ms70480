@@ -25,3 +25,20 @@ Desenhando curvas no contexto
         - bezierCurveTo(): arco complexo que pode inclinar e recebe três coordenadas.
     - Propriedades:
         - lineWidth, strokeStyle, lineCap, como nas linhas.
+    
+Desenhando caminhos no contexto
+    - É possível juntar todas as chamadas para os vários métodos de desenho (sem executar o beginPath) para criar um traço complexo com diversas formas diferentes, onde todos os desenhos estarão conectados.
+    - Desenhar formas personalizadas de qualquer tipo e tamanho usando o método beginPath e encadeando juntos uma série de métodos de desenho.
+
+Desenhando retangulos no contexto
+    - rect(X,Y,Width,Height): desenhar um retangulo, do ponto X e Y (canto superior esquerdo) até o tamanha determinado.
+
+Preenchendo desenhos no contexto
+    - Cor sólida:
+        - fillStyle: define a cor que será preenchida.
+        - fill(): preenche o desenho com a cor definida.
+        - fillRect(): método específico para retângulos que cria e preenche o retângulo com a cor definida.
+    - Gradiente:
+        - Usa objeto CanvasGradient
+        - createLinearGradient(iX,iY,fX,fY): cria o objeto CanvasGradient com o ponto inicial e final da linha gradiente.
+        - addColorStop(ponto na linha,cor): adiciona paradas de cores a linha gradiente.
