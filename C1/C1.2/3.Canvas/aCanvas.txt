@@ -38,7 +38,16 @@ Preenchendo desenhos no contexto
         - fillStyle: define a cor que será preenchida.
         - fill(): preenche o desenho com a cor definida.
         - fillRect(): método específico para retângulos que cria e preenche o retângulo com a cor definida.
-    - Gradiente:
+    - Gradiente Linha:
         - Usa objeto CanvasGradient
         - createLinearGradient(iX,iY,fX,fY): cria o objeto CanvasGradient com o ponto inicial e final da linha gradiente.
         - addColorStop(ponto na linha,cor): adiciona paradas de cores a linha gradiente.
+    - Gradiente Radial:
+        - Como o gradiente de linha, porém em forma circular.
+        - Define dois círculos (incial e final), os padrões de cores que serão utilizados e então as cores são divididas dentre os dois círculos.
+    - Pattern:
+        - Preencher objeto com uma imagem;
+        - Criar um pattern para a imagem e então atribuí-la ao fillStyle do contexto;
+
+Desenhando imagens
+    - 

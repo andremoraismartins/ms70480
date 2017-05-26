@@ -17,6 +17,7 @@
                 path();
                 rect();
                 gradient();
+                pat();
             }
             function lines(){
                 var surface = document.getElementById("lineSurface");
@@ -125,8 +126,13 @@
                 ctxt.beginPath();
                 ctxt.lineWidth = 3;
                 ctxt.rect(0, 0, 150, 125);
-                var gradient = ctxt.createLinearGradient(150, 150, 200, 125);
-                gradient.addColorStop(0, "Black");
+                var gradient = ctxt.createLinearGradient(
+                    0, // X do ponto inicial da linha
+                    0, // Y do ponto inicial da linha
+                    150, // X do ponto final da linha
+                    125 // Y do ponto final da linha
+                );
+                gradient.addColorStop(0, "Black"); //Adiciona cores dentro da linha
                 gradient.addColorStop(0.5, "Gray");
                 gradient.addColorStop(1, "White");
                 ctxt.fillStyle = gradient;
@@ -137,12 +143,12 @@
                 ctxt.lineWidth = 3;
                 ctxt.rect(150, 150, 250, 175);
                 var gradient = ctxt.createRadialGradient(
-                    200, // X centro
-                    200, 
-                    5, 
-                    250, 
-                    250, 
-                    100
+                    200, // X do centro do círculo inicial
+                    200, // Y do centro do círculo inicial
+                    5, // Raio do círculo inicial
+                    250, // X do centro do círculo final
+                    250, // Y do centro do círculo final
+                    100 // Raio do círculo final
                 );
                 gradient.addColorStop(0, "Red");
                 gradient.addColorStop(.5, "Orange");
@@ -150,6 +156,19 @@
                 ctxt.fillStyle = gradient;
                 ctxt.fill();
                 ctxt.stroke();
+            }
+            function pat(){
+                var ctxt = document.getElementById("patSurface").getContext("2d");
+                ctxt.lineWidth = 3;
+                ctxt.rect(150, 150, 200, 125);
+                var img = new Image();
+                img.src = "picture.jpg";
+                img.onload = function () {
+                    var pat = ctxt.createPattern(img, "repeat");
+                    ctxt.fillStyle = pat;
+                    ctxt.fill();
+                    ctxt.stroke();
+                }
             }
         </script>
     </head>
@@ -173,6 +192,9 @@
             Your browser does not support HTML5.
         </canvas>
         <canvas id="gradientSurface" width="600" height="400">
+            Your browser does not support HTML5.
+        </canvas>
+        <canvas id="patSurface" width="600" height="400">
             Your browser does not support HTML5.
         </canvas>
     </body>
