@@ -18,6 +18,7 @@
                 rect();
                 gradient();
                 pat();
+                text();
             }
             function lines(){
                 var surface = document.getElementById("lineSurface");
@@ -170,6 +171,23 @@
                     ctxt.stroke();
                 }
             }
+            function text(){
+                var textSurface = document.getElementById("textSurface");
+                var ctxt = textSurface.getContext("2d");
+                ctxt.strokeText("1. Text with default font", 100, 100); 
+                ctxt.font = "24px arial";
+                ctxt.strokeText("2. Text with altered font", 100, 125); 
+                ctxt.font = "24px arial";
+                ctxt.strokeStyle = "Red";
+                ctxt.strokeText("3. Text with altered colored font", 100, 160);
+                ctxt.font = "24px arial";
+                ctxt.fillStyle = "Red";
+                ctxt.fillText("4. Text with altered colored font", 100, 185);
+                ctxt.font = "24px arial";
+                ctxt.textAlign = "center";
+                ctxt.fillStyle = "Red";
+                ctxt.fillText("5. Text with altered colored font Centered.", textSurface.width / 2, textSurface.height / 2);
+            }
         </script>
     </head>
     <body>
@@ -195,6 +213,9 @@
             Your browser does not support HTML5.
         </canvas>
         <canvas id="patSurface" width="600" height="400">
+            Your browser does not support HTML5.
+        </canvas>
+        <canvas id="textSurface" width="600" height="400"> 
             Your browser does not support HTML5.
         </canvas>
     </body>

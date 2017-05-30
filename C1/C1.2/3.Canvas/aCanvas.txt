@@ -49,5 +49,9 @@ Preenchendo desenhos no contexto
         - Preencher objeto com uma imagem;
         - Criar um pattern para a imagem e então atribuí-la ao fillStyle do contexto;
 
-Desenhando imagens
-    - 
+Desenhando texto no contexto
+    - strokeText(texto,xInicio,yInicio): desenha o texto informado na posição (X,Y) do contexto partindo do inicio da seq de caracteres.
+    - ctxt.font = "24px arial": configurar uma fonte e seu tamanho.
+    - ctxt.strokeStyle = "Red": configurar cor da linha da fonte.
+    - ctxt.fillStyle = "Red": configurar a cor do corpo da fonte.
+    - ctxt.textAlign = "center": diz ao contexto para considerar (X,Y) o ponto central da seq. de caracteres.

@@ -1,0 +1,7 @@
+Criando um jogo 
+    1. Você foi contratado para criar um jogo. Para a primeira fase do jogo, você deve fazer uma bola mover do lado esquerdo da tela para o lado direito. 
+        1.1. Como você pode conseguir isso com o elemento HTML5 <canvas>? 
+        1.2. E com  SVG? 
+    2. Você demonstra essa fase para as partes interessadas, e eles adoram. Para a próxima etapa, quando a bola é clicada, ele deve dividir em duas bolas. 
+        2.1. Como o número de bolas aumenta ao ser clicado, o que considerações devem ser tomadas? 
+        2.2. Usar o elemento SVG ou o <canvas> seria a melhor solução para este jogo?

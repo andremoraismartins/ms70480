@@ -1,0 +1,7 @@
+Scalable Vector Graphics
+    - Linguagem baseada em XML para criar gráficos bidimensionais
+    - Implementada usando tags no HTML5 dentro de elementos <svg>
+    - Não perdem qualidade com aumento ou diminuição de zoom
+    - Acesso através do DOM e possuem atributos, estilos e eventos
+    - Usar SVG pode ser mais simples que canvas, pois usa declarações dentro do HTML. Porem, o desempenho a medida que aumenta o número de objetos em uma renderização, o SGV perde em desempenho para o canvas.
+    

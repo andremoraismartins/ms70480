@@ -1,0 +1,12 @@
+1.c. getElementByClassName, pois o correto seria getElementsByClassName
+    -> D. Correct: The queryAll method isn’t available to search the DOM.
+2.a. document.getElementById("myDog")
+    -> A. Correct: document.getElementbyId(“myDog”); retrieves only the single image with the ID myDog.
+3.b. Keep a reference to the removed node to be able to add it back
+    -> B. Correct: When an element is removed and needed again, a reference to the removed node must be kept to be able to add it back.
+4.c. Include the <source> element for each video type so that each browser can play the version that it supports.
+    -> C. Correct: The <source> elements specify multiple video formats so that the browser can choose the correct one.
+5.c. beginPath
+    -> C. Correct: The beginPath method tells the context to start a new drawing from its current point.
+6.c. <canvas> using JavaScript to create the graphics
+    -> C. Correct: The <canvas> element provides superior performance compared to the <svg> element.
