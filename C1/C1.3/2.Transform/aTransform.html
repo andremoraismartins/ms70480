@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<title></title>
+		<style>
+			img {
+				height: 150px;
+				width: 225px;
+			}
+			.imgRotate {
+				transform: rotate(90deg);
+			}
+			.imgTranslate{
+				transform: translate(50px, 50px);
+			}
+			.imgSkew{
+				transform: skew(10deg, 10deg);
+			}
+			.imgScale {
+				transform: scale(1.5);
+			}
+			.imgComb{
+				transform: translate(50px, 0px) scale(1,5) skew(10deg, 10deg);
+			}
+		</style>
+		<script>
+			function setClassOnClick (text){
+				document.getElementById(text).onclick = function () {
+					this.classList.add(text);
+				}
+			}
+			window.onload = function () {
+				setClassOnClick("imgRotate");
+				setClassOnClick("imgTranslate");
+				setClassOnClick("imgSkew");
+				setClassOnClick("imgScale");
+				setClassOnClick("imgComb");
+			}
+		</script>
+	</head>
+	<body>
+		<section>
+			<p>Rotate</p>
+			<img id="imgRotate" src="picture.jpg" style="position:relative"/>
+		</section>
+		<section>
+			<p>Translate</p>
+			<img id="imgTranslate" src="picture.jpg" style="position:relative"/>
+		</section>
+		<section>
+			<p>Skew</p>
+			<img id="imgSkew" src="picture.jpg" style="position:relative"/>
+		</section>
+		<section>
+			<p>Scale</p>
+			<img id="imgScale" src="picture.jpg" style="position:relative"/>
+		</section>		
+		<section>
+			<p>Combining Elements</p>
+			<img id="imgComb" src="picture.jpg" style="position:relative"/>
+		</section>
+	</body>
+</html>

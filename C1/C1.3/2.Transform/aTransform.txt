@@ -1,0 +1,10 @@
+Transform
+	- Permitem alterar a aparência de um elemento, faze-lo maior, menor, rodá-lo, e assim por diante.
+	- É uma propriedade CSS que deve ser aplicada ao elemente e que recebe os métodos que serão aplicados.
+
+Aplicando no transform
+	- rotate(deg): gira o elemento com os graus informados (negativo para anti-horário);
+	- translate(qtdPX,qtdPY): permite mover um elemento HTML alterando (acrescentando) sua posição relativa X e Y na página;
+	- skew(deg,deg): inclinar um elemento HTML para que ele não seja paralelo ao eixo vertical ou horizontal;
+	- scale(dec): permite redimensionar elementos por uma porção específicada. Recebe a porcentagem (decimal) a ser escalonada, se maior que 1 aumenta a imagem e se menor que 1 diminui a imagem. Escala para fora/dentro de seu centro absoluto, ou seja, em todas as direções;
+	- É possível combinar transformações colocando-as uma após a outra na mesma propriedade transform. A ordem importa, pois os efeitos são aplicados  na ordem que eles são específicados

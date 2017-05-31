@@ -1,0 +1,19 @@
+Mostrando e ocultando elementos
+	- É possível mostrar e ocultar elementos declarativamente na marcação HTML através do CSS.
+
+Propriedades	
+	- display: exibe/esconde o elemento da tela e adiciona/remove do layout, assim todos os elementos circundantes são realinhados.
+		- inline: exibe o elemento e adiciona no layout, assim todos os elementos circundantes se realinham para fora do caminho para onde estavam originalmente;
+		- none: esconde o elemento e remove do layout, assim todos os elementos circundantes se realinham como se ele não estivesse lá;
+	- visibility: exibe/esconde o elemento da tela sem adicionar/remover do layout, assim os elementos circundantes não são realinhados.
+		- visible: visível para mostrar o elemento;
+		- hidden: oculta o elemento, porém seu espaço continua intacto e assim os elementos circundantes não são realinhados;
+		- colapse: colapsa o elemento quando aplicável, como em linhas da tabela, e age parecido com o display: none, realinhando os elementos circundantes;
+		- inherit: herdar o valor da propriedade de visibility do pai;
+
+Exam Tip
+	- Se é necessário manter o layout, use visibility: hidden.
+	- Se não é necessário manter o layout, use display: none ou visibility: colapse.
+
+Auxílio
+	- https://www.w3schools.com/cssref/pr_class_display.asp

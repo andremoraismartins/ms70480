@@ -1,0 +1,5 @@
+Localização de um elemento
+	- Por padrão, todos os elementos HTML fluem estaticamente da esquerda para a direita na mesma ordem em que são declarados na página HTML.
+	- Absolute: o elemento será posicionado no local exato específicado, em relação as bordas do seu contêiner/página.
+	- Relative: o elemento será posicionado em relação as coordenadas do irmão esquerdo imediato.
+	- Ao usar posicionamento absoluto ou relativo, as configurações de borda ou margem padrão são ignoradas porque o objeto está posicionado onde os atributos de posicionamento direcionam o elemento a estar.

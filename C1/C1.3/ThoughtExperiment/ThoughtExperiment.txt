@@ -1,0 +1,20 @@
+Neste experimento mental, aplique o que aprendeu neste capitulo. Você pode encontrar respostas para essas perguntas na seção "Respostas" no final deste capítulo. 
+	
+Você foi encarregado de construir uma página da web que requer que um usuário responda a uma uma série de perguntas. No entanto, as perguntas são dinâmicas, com base na resposta do usuário da pergunta anterior. O usuário deve ver apenas questões relevantes. Tome o seguinte fluxo de perguntas como as regras para esta página:
+
+	Q1
+		Q2
+			Q4
+				Q10
+			Q5
+				Q10
+		Q3
+			Q6
+				Q7
+					Q9
+						Q10
+				Q8
+					Q9
+						Q10
+
+Crie todo o JavaScript necessário para mostrar e ocultar os elementos necessários, dependendo da resposta a cada pergunta. Suponha que a resposta a cada pergunta é uma seleção de botão de opção com apenas as opções Sim / Não.
