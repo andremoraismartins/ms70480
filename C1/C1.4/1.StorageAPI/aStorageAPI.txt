@@ -1,0 +1,24 @@
+WebStorage API
+	- É uma nova API para armazenar dados de páginas da web localmente, sendo que essa API substitui o conceito de cookies.
+	- A API está disponível como um objeto global.
+	- Os métodos para localStorage e sessionStorage são exatamente os mesmos, sendo diferente somente sua vida útil.
+
+Local storage - Armazenamento local
+	- É persistente e os dados armazenados localmente estão disponíveis para a página mesmo se o usuário fechar o navegador completamente e em seguida reabri-lo.
+	- Para acessá-lo, use o objeto localStorage.
+
+Session storage - Armazenamento de sessão
+	- Está disponível somente para a duração da sessão atual, portanto, se o usuário fechar o navegador, o armazenamento da sessão será limpo automaticamente e não estará mais disponível.
+	- Para acessá-lo, use o objeto sessionStorage.
+
+Métodos
+	- setItem: adiciona um par chave-valor ao armazenamento.
+		- Se nenhum item com a chave específicada existir, o item é adicionado;
+		- Se essa chave existir, seu valor é atualizado;
+	- getItem: recupera dados armazenados com base em um valor de chave ou índice específicado.
+	- clear: limpa todo o armazenamento que foi salvo.
+	- key: recupera a chave de um índice específicado.
+	- removeItem: remove o par chave-valor específicado do armazenamento.
+
+Propriedades
+	- length: retorna o número de pares chave-valor no armazenamento.

@@ -1,0 +1,8 @@
+1.	A. The top-left corner of the browser window.
+	B. Correct: Absolute positioning positions the element relative to its parent element
+
+2.	D. scale
+	D. Correct: The scale transform changes the size of an object.
+
+3.	D. visibility='hidden'
+	D. Correct: Visibility=’hidden’ hides an element, and its surrounding elements remain in place as though the element was still there.
