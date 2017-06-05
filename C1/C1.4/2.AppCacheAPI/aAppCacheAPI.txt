@@ -1,0 +1,35 @@
+AppCache API
+    - Torna o conteúdo e as páginas disponíveis mesmo quando um aplicativo da Web está no modo offline, armazenando arquivos no cache do aplicativo no navegador.
+    - A quantidade de dados que o navegador pode armazenar é limitada para uso offline.
+
+Manifesto AppCache
+    - Implementá-lo é simples como adicionar o atributp manifest="webApp.appcache" a tag HTML.
+    - manifest: informa o navegador que esta página da web precisa estar disponível offline. O valor do atributo manifesto aponta para um arquivo de manifesto, sendo que o nome do arquivo é mais uma convenção do que um requisito, geralmente *.appcache.
+    Arquivo Manifesto AppCache
+        - O arquivo de manifesto deve listar todos os arquivos e recursos para ser armazenados para uso offline e contem três seções (CACHE, NETWORK e FALLBACK).
+        - A primeira linha do arquivo deve sempre ser CACHE MANIFEST e comentários podem ser adicionados com #
+        - Seção CACHE: lista todos os recursos que devem ser armazenados em cache offline, isso deve incluir todos os arquivos CSS, arquivos JPG, arquivos de vídeo e áudio e qualque outro recurso para funcionar corretamente.
+        - Seção NETWORK: declara todos os recursos que devem estar disponíveis na internet, ou seja, itens que não podem ser armazenados em cache, como elementos de terceiros que serão incorporados na página.
+        - Seção FALLBACK: permite fornecer instruções de retorno para o navegador no caso de um item não estar disponível no cache e o navegador estiver no modo offline. É possível informar ao navegador, que se estiver offline e não puder acessar uma pasta como /resources, deve substituir todas as referências para uma determinada imagem como resource.jpg.
+
+API AppCache
+    - É usada no JavaScript através de um objeto global: window.applicationCache.
+    - É possível verificar o status do appCache (window.applicationCache.status):
+        - Uncached: o aplicativo não está associado a um manifesto de aplicativo.
+        - Idle: a atividade de cache está ociosa e a cópia mais atualizada do cache está sendo usada.
+        - Checking: o manifesto do aplicativo está sendo verificado para atualizações.
+        - Downloading: os recursos no manifesto do aplicativo estão sendo baixados.
+        - UpdateReady: os recursos listados no manifesto foram baixados com exito.
+        - Obsolete: o manifesto não pode mais ser baixado, portanto, o cache do aplicativo está sendo eliminado.
+    - Métodos do appCache:
+        - swapCache: indica que o cache deve ser substituido por uma versão mais recente.
+        - update: diz ao navegador para atualizar o cache se uma atualização estiver disponível, é um metodo assincrono.
+    - Eventos do appCache:
+        - onchecking: navegador está verificando se há uma atualização para o manifesto do aplicativo ou aplicativo está sendo armazenado em cache pela primeira vez.
+        - onnoupdate: o manifesto do aplicativo não tem nenhuma atualização disponível.
+        - ondownloading: o navegador está baixando o que foi solicitado a fazer pelo arquivo de manifesto.
+        - onprogress: os arquivos estão sendo baixados para o cache offline.
+        - oncached: o download do cache foi concluido.
+        - onupdateready: os recursos listados no manifesto foram recentemente redownloaded e o método swapCache pode ser chamado.
+        - onobsolete: um arquivo de manifesto não está mais disponível.
+        - onerror: ocorreu um erro. Isso pode resultar de muitas coisas. O registro apropriado é necessário para obter as informações e resolver.

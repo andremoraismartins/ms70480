@@ -6,6 +6,7 @@ WebStorage API
 Local storage - Armazenamento local
 	- É persistente e os dados armazenados localmente estão disponíveis para a página mesmo se o usuário fechar o navegador completamente e em seguida reabri-lo.
 	- Para acessá-lo, use o objeto localStorage.
+	- O armazenamento é limitado e a quantidade de espaço disponível pode ser diferente entre os navegadores.
 
 Session storage - Armazenamento de sessão
 	- Está disponível somente para a duração da sessão atual, portanto, se o usuário fechar o navegador, o armazenamento da sessão será limpo automaticamente e não estará mais disponível.
