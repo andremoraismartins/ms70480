@@ -1,0 +1,3 @@
+Escopo das variáveis
+    - Variáveis com escopo global está disponível em toda a página web.
+    - Variáveis com escopo local está disponível somente onde foi especificado.
