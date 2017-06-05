@@ -1,0 +1,10 @@
+1. C. sessionStorage
+    -> C. Correct: sessionStorage clears when the session closes.
+2. C. Specify the manifest attribute on the HTML element.
+    -> C. Correct: Specifying the manifest attribute on the HTML element is the correct action.
+3. B. Session manifest
+    -> B. Correct: Session manifest isn’t a valid option.
+4. A. oncached
+    -> A. Correct: The oncached event is fired when the download completes.
+5. B. Set the maximumAge property to a non-zero value on the PositionOptions object.
+    -> B. Correct: Set the maximumAge property to a non-zero value on the PositionOptions object

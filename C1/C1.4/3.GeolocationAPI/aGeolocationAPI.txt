@@ -1,0 +1,23 @@
+API de Geolocalização
+    - Para obter uma referência a API de geolocalização basta acessar a propriedade window.navigator.
+    - Por segurança o navegador pergunta aos usuários se desejam permitir o acesso a localização.
+    - Métodos principais:
+        - getCurrentPosition: utilizada para obter a posição atual do usuário ou do dispositivo.
+            - Parametros:
+                - positionCallback: é uma função callback que a API chama após a posição atual ser determinada (Sucesso).
+                - positionErrorCallback: é opcional e uma função callback chamada quando ocorre um erro.
+                - positionOptions: é um objeto especial que permite definir algumas opções especiais que controlam como o método getCurrentPosition se comporta. Possíveis valores:
+                    - enableHighAccuracy: quando true, o método getCurrentPosition tenta obter o mais próximo como pode para a localização real;
+                    - timeout: especifica um periodo de tempo limite para quanto tempo o método getCurrentPosition pode levar para concluir, 0 é infinito;
+                    - maximumAge: informa a API para usar um resultado armazenado em cache se disponível;
+            - Retorno:
+                - positionCallback: recebe um objeto de posição, com duas propriedades:
+                    - coords: indica a hora em que os coords foram recebidas.
+                    - timestamp: é um objeto de coordenadas que contém latitude, longitude, altitude, titulo e velocidade.
+                - positionErrorCallback: recebe um objeto de erro, com duas propriedades:
+                    - code: código do erro;
+                    - message: mensagem do erro;
+
+Método watchPosition
+    - Diponível no objeto de geolocalização, fornece um mecanismo embutido que pesquisa continuamente para a posição atual.
+    - Para cancelar a pesquisa use clearWatch informando o watchPosition a ser cancelado.
