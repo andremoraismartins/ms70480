@@ -1,0 +1,2 @@
+Palavra-chave this
+    - É um termo especial que permite referenciar os objetos diretamente.

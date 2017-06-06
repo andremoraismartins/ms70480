@@ -1,3 +1,7 @@
 Escopo das variáveis
+    - Variáveis são undefined até serem inicializadas com algum valor.
     - Variáveis com escopo global está disponível em toda a página web.
     - Variáveis com escopo local está disponível somente onde foi especificado.
+    - Existem exemplos e explicações de escopo no HTML da seção.
+    - Funções chamadas a partir de uma outra função, não herdam ou não tem acesso as variáveis locais do método. Para isso, é necessário passá-los como parâmetro.
+    - Variáveis com escopo local substituem variáveis de escopo de nível mais alto de mesmo nome.

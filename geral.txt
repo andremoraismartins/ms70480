@@ -1,5 +1,5 @@
-TRAD: 84
-EXAM: 102
+TRAD: 89
+EXAM: 106
 
 MeasureUp
 01/05 - 7/10

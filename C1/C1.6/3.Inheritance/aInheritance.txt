@@ -1,0 +1,8 @@
+Herança
+    - Como você viu nas seções anteriores, tudo é um objeto. Um objeto personalizado é composto de propriedades onde algumas propriedades são tipos nativos e algumas propriedades são atribuídas a funções para implementar métodos.
+
+    - Object.create parametros:
+        - Protótipo do objeto a criar ou null: 
+            - objeto a criar: o objeto é criado com todas as propriedades e funções declaradas nesse protótipo de objeto.
+            - null: o objeto usa somente as funções ou propriedades especificados no segundo parametro.
+        - Objeto: permite adicionar propriedades ou comportamentos ao objeto que está sendo criado.

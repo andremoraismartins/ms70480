@@ -1,0 +1,6 @@
+Objetos Personalizados
+    - Criar objetos personalizados para encapsular a funcionalidade dentro de entidades lógicas.
+    - As propriedades de um objeto representam seu estado, enquanto seus métodos fornecem seus comportamentos.
+    - Criar objetos em linha pode ser util somente quando ele é usado na página onde ele é definido.
+    - Se é necessário usar um objeto com frequência, considere criar um protótipo para que seja possível construi-lo quando necessário.
+    - JS consiste em objetos, ou seja, tudo é um objeto. Cada objeto é baseado em um protótipo. Sempre que você cria um objeto, essa instância é baseada no protótipo do objeto.

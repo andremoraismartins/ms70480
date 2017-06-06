@@ -9,32 +9,42 @@
             }
         </style>
         <script>
-            var globalVar = "global";
+            var globalVar = "global", // Declarada no escopo global, disponível para a página inteira
+                scaleX = 0.0; // Declarada no escopo global, disponível para a página inteira
             window.onload = function () {
-                var localVar = "local";
+                var localVar = "local"; // Local para o manipulador onload e para os outros manipuladores usado dentro do onload
                document.getElementById("Div1").onclick = function () {
                     var insideDiv1Click = "insideDiv1";
-                    alert(globalVar);
-                    alert(localVar);
-                    alert(insideDiv1Click);
+                    alert("Div1: " + globalVar); // Acessivel pois foi declarada no escopo global da página
+                    alert("Div1: " + localVar); // Acessivel pois foi declarada no escopo onload
+                    alert("Div1: " + insideDiv1Click); // Acessivel pois foi declarada neste escopo onclick
                 };
                 document.getElementById("Div2").onclick = function () {
-                    alert(globalVar);
-                    alert(localVar);
-                    alert(insideDiv1Click);
+                    alert("Div2: " + globalVar); // Acessivel pois foi declarada no escopo global da página
+                    alert("Div2: " + localVar); // Acessivel pois foi declarada no escopo onload
+                    alert("Div2: " + insideDiv1Click); // Não acessivel pois foi declarada no escopo onclick do Div1
                 };
                 document.getElementById("Div3").onclick = function () {
                     var insideDiv3 = "Div3";
                     AFunction();
-                    BFunctionWithParam(insideDiv3);
+                    BFunctionWithParam(insideDiv3);  // Acessivel pois foi declarada no escopo onclick do Div3
                 };
                 function AFunction() {
                     var x;
-                    alert(insideDiv3);
+                    alert("AFunction: " + insideDiv3); // Não acessivel pois foi declarada no escopo onclick do Div3
                 }
                 function BFunctionWithParam(p) {
-                    alert(p);
-                    alert(localVar);
+                    alert("BFunction: " + p); // Acessivel pois foi é recebido como parâmetro
+                    alert("BFunction: " + localVar); // Não acessivel pois foi declarada no escopo onload
+                }
+                document.getElementById("Div4").onclick = function () {
+                    var scaleX = -3; // Existe uma variável global com mesmo nome, portanto essa variável local substituirá o valor da global
+                    alert("Div4: " + scaleX);
+                    scaleDiv();
+                }
+                function scaleDiv() {
+                    //code to scale the Div by a factor of scaleX
+                    alert("ScaleDiv: " + scaleX); // Acessa a variável global
                 }
             }
         </script>
@@ -43,5 +53,6 @@
         <div id="Div1"></div>
         <div id="Div2"></div>
         <div id="Div3"></div>
+        <div id="Div4"></div>
     </body>
 </html>

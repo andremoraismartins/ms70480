@@ -1,0 +1,5 @@
+Native Objects
+    - Estão disponíveis diretamente através do JS.
+    - Alguns objetos nativos estão disponíveis estaticamente, ou seja, não necessitam ser instanciados. Outros, necessitam criar uma instancia.
+    - Ambos estão acessíveis no namespace global.
+    

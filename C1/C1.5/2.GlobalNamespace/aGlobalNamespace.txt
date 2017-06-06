@@ -1,0 +1,4 @@
+Namespace Global
+    - Neste namespace estão todas as bibliotecas JS nativas e é referenciado pelo objeto window.
+    - Com o grande crescimento do uso de bibliotecas de terceiros, podem ocorrer conflitos no namespace global e assim não será possível definir qual a exata biblioteca que se deseja usar.
+    - Para evitar esses problemas recomenda-se evitar o uso do namespace global e criar seus propríos namespaces baseados em seu domínio, como demonstrado no HTML da seção.

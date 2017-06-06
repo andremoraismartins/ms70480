@@ -1,0 +1,6 @@
+1. B. The scope of a variable depends on where inside the script it’s declared.
+    -> B. Correct: The scope of a variable depends on where inside the script it’s declared
+2. B. The global namespace is available to all applications in the session, and using it could result in a naming conflict.
+    -> B. Correct: Because the global namespace is available to all applications in the session, using it could result in a naming conflict.
+3. C. The this keyword provides a reference to the object.
+    -> C. Correct: The this keyword provides a reference to the object.

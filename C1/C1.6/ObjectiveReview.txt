@@ -1,0 +1,7 @@
+1. D. Person
+    -> D. Correct: People aren’t native JavaScript objects.
+2. B. var book = {Title: “My book about things”, Author: “Jane Doe”, Pages: 400};
+    D. var book = new {Title: “My book about things”, Author: “Jane Doe”, Pages: 400};
+    -> B. Correct: This code segment creates a dynamic object.
+3. D. Correct: Prototypes are used to create inheritance trees in JavaScript.
+    -> D. Correct: Prototypes are used to create inheritance trees in JavaScript.
