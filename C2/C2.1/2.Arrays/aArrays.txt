@@ -39,3 +39,21 @@ Usando o método reverso (reverse)
 
 Usando o método sort
 	- Classifica os itens na matriz em ordem crescente.
+
+Usando o método de slice
+	- Remove um ou mais itens em uma matriz e os move para uma nova matriz (Fatiar o vetor).
+	- Parâmetros:
+		- inicio: indice inicial para fatiar o vetor.
+		- fim: indice final para fatiar o vetor. Este indíce não está incluído na fatia.
+	- Retornos:
+		- vetor: novo vetor com os item fatiados.
+
+Usando o método splice
+	- Fornece uma maneira de substituir itens em uma matriz com novos itens.
+	- Parâmetros: 
+		- Indice na matriz onde a operação de junção deve iniciar.
+		- Número de itens a substituir, a partir do índice especificado no primeiro parâmetro.
+		- Parâmetro opcional, lista com os itens que devem substituir os itens que estão sendo processados.
+			- Se for omitido, os itens emendados simplesmente são removidos da matriz e não substituídos.
+	- Retornos:
+		- vetor/matriz: contendo os itens que são emendado fora da matriz de origem.

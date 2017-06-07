@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <script>
+            // Usando os métodos pop e push
+            var sportsPP = new Array();
+            sportsPP.push('soccer', 'basketball', 'hockey');
+            console.log("Push", sportsPP);
+            sportsPP.push('football');
+            console.log("Push", sportsPP);
+            console.log("Pop", sportsPP.pop(), sportsPP);
+
+            // Usando os métodos shift e unshift
+            var sportsSU = new Array();
+            sportsSU.unshift('soccer', 'basketball', 'hockey');
+            console.log("Unshift", sportsSU);
+            sportsSU.unshift('football');
+            console.log("Unshift", sportsSU);
+            console.log("Shift", sportsSU.shift(), sportsSU);
+
+            // Exemplo de fila (Push e Shift)
+            var fila = new Array();
+            fila.push('soccer');
+            console.log("Fila", fila);
+            fila.push('basketball');
+            console.log("Fila", fila);
+            fila.push('hockey');
+            console.log("Fila", fila);
+            console.log("Fila", fila, fila.shift());
+            fila.push('golf');
+            console.log("Fila", fila);
+            console.log("Fila", fila, fila.shift());
+
+            // Exemplo de pilha (Push e Pop)
+            var fila = new Array();
+            fila.push('soccer');
+            console.log("Pilha", fila);
+            fila.push('basketball');
+            console.log("Pilha", fila);
+            fila.push('hockey');
+            console.log("Pilha", fila);
+            console.log("Pilha", fila, fila.pop());
+            fila.push('golf');
+            console.log("Pilha", fila);
+            console.log("Pilha", fila, fila.pop());
+        </script>
+    </head>
+</html>

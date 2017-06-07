@@ -1,0 +1,31 @@
+Usando o método every
+    - Permite processar lógica específica para cada elemento de matriz para determinar se algum deles atende a alguma condição.
+    - Ou seja, os elementos da matriz serão passados por uma função que valida alguma condição.
+    - Parâmetros:
+        - A função que deve ser executada para cada elemento do vetor. Essa função recebe:
+            - value: (obrigatório) o valor do elemento atual
+            - index: (opcional) o indice do elemento no array
+            - array: (opcicional) o array na qual o elemento pertence
+        - (Opcional) reference para o array utilizado
+    - Retornos:
+        - true se a validação de todos os elementos for true.
+        - Mas ao obter o primeiro resultado falso para qualquer item na matriz, ele sai e every retorna false.
+
+Usando o método some
+    - Funciona como o every, porém some verifica somente se algum item na matriz atende aos critérios.
+    - Retornos:
+        - true se a função chamada retorna true para qualquer elemento (1).
+        - false se todos os elementos na matriz retornam false.
+    
+Usando o método forEach
+    - Permite que um aplicativo processe alguma lógica em relação a cada item na matriz. É executado para cada item único e não produz um valor de retorno.
+    - Parâmetros:
+        - function que será executada para cada elemento do array e recebe:
+            - value: (obrigatório) o valor do elemento atual
+            - index: (opcional) o indice do elemento no array
+            - array: (opcicional) o array na qual o elemento pertence
+
+Usando o método filter
+    - Fornece uma maneira de remover itens para uma matriz com base em algum processamento feito na função de retorno de chamada
+    - Retornos:
+        - Uma nova matriz contendo os elementos que são incluídos com base em um valor de retorno de true ou false da função callback.

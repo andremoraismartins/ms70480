@@ -25,21 +25,21 @@
 		console.log("MultiArray", multiArray, multiArray[0], multiArray[1], multiArray[2]);
 
 		// Usando length
-		var anArrayL = new Array(5);
-		console.log("Length", anArrayL.length);
+		var length = new Array(5);
+		console.log("Length", length.length);
 
 		// Concat
-		var sports = new Array( 'football', 'cricket', 'rugby', 'tennis', 'badminton');
-		var moreSports = new Array('soccer', 'basketball', 'hockey');
-		var combinedSports = sports.concat(moreSports);
-		console.log("Concat", sports, moreSports, combinedSports);
+		var sportsC = new Array( 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+		var moreSportsC = new Array('soccer', 'basketball', 'hockey');
+		var concat = sportsC.concat(moreSportsC);
+		console.log("Concat", sportsC, moreSportsC, concat);
 
-		var sportsIL = new Array('soccer', 'basketball', 'hockey', 'football', 'soccer', 'tennis', 'badminton');
+		var indexOf = new Array('soccer', 'basketball', 'hockey', 'football', 'soccer', 'tennis', 'badminton');
 		// Usando o método indexOf
-		console.log("IndexOf", sportsIL.indexOf('soccer', 0));
+		console.log("IndexOf", indexOf.indexOf('soccer', 0));
 		
 		// Usando o método lastIndexOf
-		console.log("LastIndexOf", sportsIL.lastIndexOf('soccer', 6));
+		console.log("LastIndexOf", indexOf.lastIndexOf('soccer', 6));
 
 		// Operador de igualdade dos métodos indexOf e lastIndexOf
 		var op = ['1', '2', '3'];
@@ -47,20 +47,32 @@
 		console.log("OP", op.indexOf('2')); // Retorna 1 pois a posição 1 tem o mesmo valor e tipo
 
 		// Usando o método de associação (join)
-		var sportsJ = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby','tennis', 'badminton');
-		console.log("JOIN", sportsJ.join(', '));
+		var join = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby','tennis', 'badminton');
+		console.log("JOIN", join.join(', '));
 
 		// Usando o método reverso (reverse)
-		var sportsR = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby','tennis', 'badminton');
-		console.log("Before Reverse", sports);
-		sports.reverse();
-		console.log("After Reverse", sports);
+		var reverse = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby','tennis', 'badminton');
+		console.log("Before Reverse", reverse);
+		reverse.reverse();
+		console.log("After Reverse", reverse);
 
 		// Usando o método sort
-		var sportsS = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
-		console.log("Before Sort", sportsS);
-		sportsS.sort();
-		console.log("After Sort", sportsS);
+		var sort1 = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+		var sort2 = new Array(1, 9, 6, 7, 4, 1, 8, 9, 6, 3, 4, 2, 0);
+		console.log("Before Sort", sort1, sort2);
+		sort1.sort();
+		sort2.sort();
+		console.log("After Sort", sort1, sort2);
+
+		// Usando o método de slice
+		var slice = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+		console.log("Slice", slice.slice(1, 2), slice.slice(1, 5));
+
+		// Usando o método splice
+		var splice = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+		console.log("Splice", splice, splice.splice(1, 3, 'golf', 'curling', 'darts'));
+
+		// 
 	</script>
 </head>
 </html>

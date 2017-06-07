@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <script>
+            window.onload = function() {
+                // Usando o método every
+                var numEvery = new Array(0, 2, 4, 6, 8, 9, 10, 12);
+                console.log("Every", numEvery.every(checkEvery, numEvery));
+                function checkEvery(value, index, array) {
+                    return (value % 2) == 0;
+                }
+
+                // Usando o método some
+                var numSome = new Array(0, 2, 4, 6, 8, 9, 10, 12);
+                console.log("Some", numSome.some(checkSome, numSome));
+                function checkSome(value, index, array) {
+                    return (value % 2) == 0;
+                }
+
+                // Usando o método forEach
+                var sportsFE = ['soccer', 'basketball', 'hockey', 'football', 'cricket','rugby'];
+                sportsFE.sort().forEach(offerSport); // Sort é opicional
+                function offerSport(value, index, array) {
+                    var sportsList = document.getElementById("sportsList");
+                    var bullet = document.createElement("li");
+                    bullet.innerText = value;
+                    sportsList.appendChild(bullet);
+                }
+
+                // 
+            }
+        </script>
+    </head>
+    <body>
+        <ul id="sportsList"></ul>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+Implementando tipos especiais de matrizes
+    - O JS não fornece um objeto personalizado para criar filas e pilhas, mas é possível implementá-las usando um array.
+    - Uma fila é essencialmente um tipo de coleção first-in-first-out, itens são adicionados à lista, eles devem ir no final da linha. (Exemplo no HTML)
+    - Uma pilha é um tipo de coleção de last-in-first-out, o último item colocado na pilha é o primeiro item que você pode tirar da pilha. (Exemplo no HTML)
+
+Usando os métodos pop e push
+    - Fornecem funcionalidade pilha.
+    - push: adiciona os itens especificados ao final da matriz.
+    - pop: remove e retorna o último item da matriz.
+
+NOTA UTILIZANDO PUSH E POP EM QUALQUER ARRAY
+    - Você pode usar os métodos pop e push em qualquer contexto para adicionar e remover itens da extremidade de uma matriz. O conceito de pilha é útil, mas não é um mecanismo de confinamento que limita o uso desses métodos para apenas arrays de pilha.
+
+Usando os métodos shift e unshift
+    - Os métodos shift e unshift funcionam da maneira exatamente oposta à do pop e push.
+    - shift: remove e retorna o primeiro elemento da matriz.
+    - unshift: insere novos elementos no início da matriz.
