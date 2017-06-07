@@ -1,0 +1,30 @@
+Avaliando expressões
+	- Fluxo condicional: deve avaliar alguns dados contra alguma condição.
+	- if, else e else if usando operadores
+	- Operadores:
+		- Condicional:
+			- ">": Avalia se o valor à esquerda é maior que o valor à direita
+			- "<": Avalia se o valor esquerda à direita é menor que o valor à esquerda
+			- ">=" "<=": Avalia o mesmo como > ou < mas com a lógica adicional que os valores podem ser igual
+			- "!=": Avalia se os valores não são iguais
+			- "==": Avalia se os valores são iguais independentemente do tipo de dados subjacente
+			- "===": Avalia se os valores são iguais tanto no valor quanto no tipo de dados subjacente
+		- Lógico:
+			- "&&": O operador lógico AND, no qual as expressões em ambos os lados avaliar como verdadeiro
+			- "||": O operador lógico OR, no qual pelo menos uma expressão de cada lado deve avaliar como verdadeiro
+
+TIP1
+	- Dois operadores condicionais estão disponíveis para verificar a igualdade: == (operador de igualdade) e === (Operador de identidade). Verificar a igualdade com o operador == irá ignorar o subjacente tipo de dados, enquanto o operador de identidade === considerará o tipo de dados. Olhe para o seguinte exemplo:
+		var n = 2000, s = '2000';
+		alert(n == s); true
+		alert(n === s); false
+	- A primeira expressão, que utiliza o operador de igualdade, é avaliada como verdadeira porque a cadeia é moldada para um número para efeitos da avaliação. A segunda expressão, que usa o operador de identidade, é avaliada como falsa porque a string '2000' não é igual ao inteiro 2000.
+
+TIP2
+	- Ao usar o operador OR lógico em uma instrução if, o mecanismo JavaScript sabe que pode prosseguir se alguma das instruções for verdadeira. Como tal, avalia as expressões da esquerda para a direita até encontrar uma que é verdadeira. Assim que o fizer, ele não avaliará quaisquer outras expressões, mas imediatamente saltará para o bloco de código verdadeiro. No exemplo anterior, se o fundo for verde, a verificação para saber se o fundo é amarelo nunca seria avaliada.
+
+Usando instruções swtich
+	- Os valores utilizados na declaração do caso para efeitos da avaliação devem ser expressos como uma constante. Por exemplo, a ativação de um valor inteiro para determinar se é divisível por outro número não funcionará porque o caso exigiria uma expressão em vez de um valor constante. Por exemplo, caso x / 10: seria uma instrução caso inválido. No entanto, a instrução switch mesmo pode aceitar uma expressão para avaliar contra todos os casos dentro o bloco de comutação.
+
+Operadores ternários
+	- O operador ternário é essencialmente um mecanismo abreviado para uma instrução if. A sintaxe da operação ternária é: <expression> ? <true part> : <false part>

@@ -1,0 +1,6 @@
+Fluxo do programa
+	- Sem o fluxo do programa, os programas JS processariam de cima para baixo na ordem em que o código foi escrito.
+	- Fluxo de programa pode ser:
+		- Fluxo condicional: é baseado na avaliação do estado para tomar uma decisão sobre qual código deve ser executado.
+		- Fluxo iterativo: é a capacidade de processar listas ou coleções de informações sistemicamente e consistentemente.
+		- Fluxo comportamental: pode ser definido como um evento ou retorno de chamada na qual a lógica específica deve ser aplicada com base no envolvimento do usuário com a aplicação web ou na conclusão de outra tarefa.

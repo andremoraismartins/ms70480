@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		/*-------------------------- USANDO IF --------------------------*/
+		//TIP1
+		var n = 2000, s = '2000';
+		alert(n == s); true
+		alert(n === s); false
+
+		var userAge = 10, gender = 'M';
+		var minimumAge = 11;
+		if (userAge > minimumAge) {
+			if (gender == 'M') {
+				//do logic for above age male
+			}
+			else {
+				//do logic for above age female.
+			}
+		} else if (gender == 'M') {
+			//do logic for underage male
+		} else {
+			//do logic for underage female.
+		}
+
+		var canvas = document.getElementById("canvas1");
+		if (canvas.style.backgroundColor == 'green') {
+			alert('proceed');
+		} else if (canvas.style.backgroundColor == 'yellow') {
+			alert('slow down/safely stop');
+		} else if (canvas.style.backgroundColor == 'red') {
+			alert('stop');
+		}
+		
+		if (canvas.style.backgroundColor == 'green' || canvas.style.backgroundColor == 'yellow')
+		{
+			alert('proceed');
+		} else if (canvas.style.backgroundColor == 'red') {
+			alert('stop');
+		}
+
+		/*-------------------------- USANDO SWITCH --------------------------*/
+		switch (canvas.style.backgroundColor) {
+			case 'yellow':
+				alert('slow down');
+				break;
+			case 'green':
+				alert('proceed');
+				break;
+			case 'red':
+				alert('stop');
+				break;
+			default:
+				alert('unknown condition');
+				break;
+		}
+		switch (canvas.style.backgroundColor) {
+			case 'yellow':
+			case 'green':
+				alert('proceed');
+				break;
+			case 'red':
+				alert('stop');
+				break;
+			default:
+				alert('unknown condition');
+				break;
+		}
+
+		/*-------------------------- OPERADORES TERNÁRIOS --------------------------*/
+		canvas.style.backgroundColor == 'green' ? document.write('proceed') : document.write('stop');
+	</script>
+</head>
+<body>
+	<canvas id="canvas1"></canvas>
+</body>
+</html>

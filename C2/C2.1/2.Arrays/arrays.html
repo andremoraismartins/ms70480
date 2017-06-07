@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		// Construtores de um array
+		var anArray1 = new Array(); // Cria array vazio sem tamanho padrão
+		var anArray2 = new Array(5); // Cria array com um tamanho padrão e seus elementos são undefined
+		var anArray3 = new Array('soccer', 'basketball', '...', 'badminton'); // Criar array com tamanho e elementos inicializados
+		var anArray4 = ['soccer', 'basketball', '...', 'badminton'];
+
+		// Acessando array
+		anArray1[1] = 'soccer';
+		console.log("Acessando", anArray1[1]);
+
+		// TIP1
+		console.log('TIP1', anArray1.length, anArray1);
+		anArray1[9] = 'soccer';
+		console.log('TIP1', anArray1.length, anArray1);
+
+		// Array multidimensional
+		var multiArray = new Array(3);
+		multiArray[0] = new Array(3);
+		multiArray[1] = new Array(3);
+		multiArray[2] = new Array(3);
+		console.log("MultiArray", multiArray, multiArray[0], multiArray[1], multiArray[2]);
+
+		// Usando length
+		var anArrayL = new Array(5);
+		console.log("Length", anArrayL.length);
+
+		// Concat
+		var sports = new Array( 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+		var moreSports = new Array('soccer', 'basketball', 'hockey');
+		var combinedSports = sports.concat(moreSports);
+		console.log("Concat", sports, moreSports, combinedSports);
+
+		var sportsIL = new Array('soccer', 'basketball', 'hockey', 'football', 'soccer', 'tennis', 'badminton');
+		// Usando o método indexOf
+		console.log("IndexOf", sportsIL.indexOf('soccer', 0));
+		
+		// Usando o método lastIndexOf
+		console.log("LastIndexOf", sportsIL.lastIndexOf('soccer', 6));
+
+		// Operador de igualdade dos métodos indexOf e lastIndexOf
+		var op = ['1', '2', '3'];
+		console.log("OP", op.indexOf(2)); // Retorna -1 pois a posição 1 tem o mesmo valor mas não é do mesmo tipo
+		console.log("OP", op.indexOf('2')); // Retorna 1 pois a posição 1 tem o mesmo valor e tipo
+
+		// Usando o método de associação (join)
+		var sportsJ = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby','tennis', 'badminton');
+		console.log("JOIN", sportsJ.join(', '));
+
+		// Usando o método reverso (reverse)
+		var sportsR = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby','tennis', 'badminton');
+		console.log("Before Reverse", sports);
+		sports.reverse();
+		console.log("After Reverse", sports);
+
+		// Usando o método sort
+		var sportsS = new Array('soccer', 'basketball', 'hockey', 'football', 'cricket', 'rugby', 'tennis', 'badminton');
+		console.log("Before Sort", sportsS);
+		sportsS.sort();
+		console.log("After Sort", sportsS);
+	</script>
+</head>
+</html>

@@ -1,0 +1,41 @@
+Trabalhando com arrays
+	- Arrays são objetos JavaScript e são criados exatamente como qualquer outro objeto JavaScript, com a palavra-chave new.
+	- Arrays em JavaScript são iniciados em zero, o que significa que o primeiro elemento na matriz está no índice zero, não no índice um
+
+TIP1
+	- Dimensionar arrays é muito dinâmico. No exemplo anterior, mesmo que a matriz é declarada inicialmente para ter um comprimento de 5, se você tentar acessar o elemento 10, a matriz redimensiona automaticamente para acomodar o comprimento solicitado. O exemplo a seguir demonstra esse conceito.
+
+Usando propriedade length
+	- Fornece informações sobre a duração da matriz - ou seja, quantos elementos a matriz alocou no momento em que a propriedade é avaliada.
+
+TIP2
+	- Alguns métodos de matriz afetam o objeto Array diretamente, enquanto outros métodos retornam um novo objeto Array. Para o exame, você deve entender quando cada caso é aplicável.
+
+Usando método concat
+	- Combina dois ou mais arrays em um array e retorna o array combinado.
+	- array1.concat(array2);
+
+Usando os métodos indexOf e lastIndexOf
+	- Os dois buscam o indice do elemento pesquisado, usam operador de identidade para comparar (exemplo HTML), recebem os mesmos parâmetros e tem os mesmos retornos.
+	- indexOf: busca de forma ascendente o índice do primeiro elemento pesquisado.
+	- lastIndexOf: busca de forma decrescente o índice do primeiro elemento pesquisado.
+	- Parâmetros:
+		- O que pesquisar no array
+		- Em qual índice a pesquisa deve começar
+	- Retorno: 
+		- int: A posição do elemento encontrado
+		- "-1": Se o elemento a ser procurado não for encontrado, o método retorna um valor de -1.
+
+Usando o método de associação (join)
+	- O método join concatena todos os elementos de uma matriz em uma única seqüência de caracteres separados por um separador de seqüência especificado.
+	- Parâmetros:
+		- Sequencia de caracteres que é o delimitador de separação dos valores
+	- Retornos:
+		- Seqüência de todos os elementos separados pela seqüência de caracteres passada como parâmetro.
+
+Usando o método reverso (reverse)
+	- Inverte a seqüência de todos os elementos na matriz.
+	- Não recebe parâmetros e não retorna valores, pois inverte a sequência da matriz original.
+
+Usando o método sort
+	- Classifica os itens na matriz em ordem crescente.
