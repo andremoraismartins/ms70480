@@ -26,7 +26,36 @@
                     sportsList.appendChild(bullet);
                 }
 
-                // 
+                // Usando o método filter
+                var numFilter = new Array(0, 2, 4, 6, 8, 9, 10, 12);
+                console.log("Filter", numFilter.filter(checkFilter, numFilter));
+                function checkFilter(value, index, array) {
+                    return (value % 2) == 0;
+                }
+                
+                // Usando o método map
+                var moneyMap = [12.8, 15.9, 21.7, 35.2];
+                console.log("Map money", moneyMap.map(roundOffMap, moneyMap), moneyMap);
+                function roundOffMap(value, position, array) {
+                    return Math.round(value);
+                }
+                var numMap = [1, 2, 3, 4, 5, 6, 7, 8];
+                console.log("Map numbers", numMap.map(squareNumMap, numMap), numMap);
+                function squareNumMap(value, position, array) {
+                    return value * value;
+                }
+
+                // Usando os métodos reduce e reduceRight
+                var numReduce = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+                console.log("Reduce", numReduce.reduce(factorial));
+                function factorial(previous, current) {
+                    return previous * current;
+                }
+                var names = ["A", "B", "C", "D", "E"];
+                console.log("ReduceRight", names.reduceRight(namesRR))
+                function namesRR(previous, current) {
+                    return previous + ", " + current;
+                }   
             }
         </script>
     </head>

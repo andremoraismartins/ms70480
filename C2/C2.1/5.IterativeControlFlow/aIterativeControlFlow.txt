@@ -1,0 +1,3 @@
+Usando o loop for
+    - É útil nos casos em que um bloco de código deve ser executado com base em um número determinístico de itens.
+    - O loop for necessita de três elementos: um contador, uma expressão e um incremento.
