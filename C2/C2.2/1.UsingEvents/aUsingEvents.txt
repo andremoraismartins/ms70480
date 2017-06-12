@@ -1,2 +1,46 @@
 Usando eventos
-	- 
+	- A API fornece eventos para que os desenvolvedores possam injetar seu próprio processamento em meio a toda a ação que ocorre em um programa.
+	- A ideia de ligar um evento é dizer ao navegador que quando ocorre um determinado evento, ele deve chamar uma função especificada.
+	- A função atribuída a um evento é dito como um event listener que escuta esse evento.
+	- Você pode conectar um evento de três maneiras:
+		- Declare-o diretamente na marcação HTML.
+		- Atribua a função à propriedade de evento do objeto através de JavaScript.
+		- Use os métodos de inclusão e remoção mais recentes no objeto para associar eventos manipuladores.
+
+Objetos de evento
+	- É um objeto comum disponível em manipuladores de eventos que fornece metadados sobre o evento.
+
+NOTA ACESSANDO O CONTEXTO DO EVENTO
+	- No Internet Explorer, o evento de janela é o método necessário para acessar o objeto de evento. No entanto, em alguns navegadores, o objeto de evento é passado para a função de evento como um parâmetro.
+
+Manipulação de eventos declarativos
+	- Manipular eventos declarativamente na marcação HTML é possível configurando uma linha de manipuladores de eventos dentro dos elementos HTML.
+
+Manipulação de eventos de atribuição
+	- Manipular eventos por atribuição é possível configurando o elemento atribuindo a função ao manipulador de eventos com JS.
+	- O objeto de janela não é o mesmo que o elemento de corpo, mas demonstra o conceito de atribuir código que precisa ser executado assim que a página é carregada.
+	- Para que isso tenha êxito, o objeto de janela deve existir. Uma vez que o objeto window é um objeto global ele existirá. No entanto, para acessar elementos da página, a página deve ser carregada ou o script deve ser executado após o processador processar o HTML.
+
+Usando os métodos addEventListener e removeEventListener
+	- são os dois métodos preferidos para conectar uma função a um evento e, em seguida, para removê-lo mais tarde conforme necessário.
+	- Cada evento é acionado na ordem em que ele foi adicionado quando o carregamento da janela é terminado.
+	- addEventListener:
+		- Parâmetros
+			- nome do evento (obrigatorio) sem prefixo on (ex: onload -> load)
+			- função do evento (obrigatorio) que deve ser executada quando o evento ocorre
+			- cascade rule (opicional)
+	- removeEventListener:
+		- Parâmetros
+			- nome do evento (obrigatorio) sem prefixo on (ex: onload -> load)
+			- função do evento (obrigatorio) que deve ser executada quando o evento ocorre
+			- cascade rule (opicional)
+
+Usando funções anônimas
+	-  A vantagem de usar funções nomeadas é que você pode remover mais tarde os listeners de eventos conforme necessário. Não é possível identificar funções anônimas depois que elas são atribuídas como ouvintes de eventos para manipulá-las.
+	- É completamente anônimo e não pode ser chamado de outros segmentos de código.
+
+Cancelar um evento
+	- Pode ser útil quando você deseja substituir completamente a implementação da funcionalidade nativa de um elemento DOM.
+
+Eventos
+	- onload é acionado quando o documento em si é totalmente carregado no navegador.

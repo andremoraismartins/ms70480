@@ -1,3 +1,30 @@
 Usando o loop for
     - É útil nos casos em que um bloco de código deve ser executado com base em um número determinístico de itens.
-    - O loop for necessita de três elementos: um contador, uma expressão e um incremento.
+    - O loop for necessita de três elementos: 
+        - um contador que contém o número atual de vezes que o loop foi executado.
+        - uma expressão avalia o contador contra algum outro valor para definir o limite do número de vezes que o loop executa.
+        - um incremento que informa como ajustar a variável do contador após cada iteração do loop.
+
+Usando o loop for...in
+    - É um método para iterar sobre as propriedades de um objeto.
+    - O loop for...in necessita de dois elementos: 
+        - o elemento que será iterado, por exemplo, um objeto ou uma array.
+        - o elemento que receberá um item a cada iteração.
+
+Usando o loop while
+    - Permite que você execute um bloco de código até que alguma condição seja avaliada como falsa.
+    - O loop while necessita de um elemento: 
+        - a exepressão que será avalida e enquanto for verdadeira a iteração continuará.
+    -  Como o loop while não usa um incrementador como o loop for, o código dentro do loop while deve ser capaz de definir a expressão como false, conforme apropriado;
+
+Usando o loop do...while
+    - A principal diferença entre o loop while e o loop do...while é que do...while sempre é executado uma vez, pois a expressão está na parte inferior do loop.
+    - O loop do..while necessita de um elemento: 
+        - a exepressão que será avalida e enquanto for verdadeira a iteração continuará.
+
+Curto-circuito nos loops
+    - A palavra-chave break deixa completamente o loop atual;
+    - A palavra-chave continue quebra do bloco de código e continua para a próxima iteração do loop.
+
+TIP
+    - A palavra-chave break é interrompida apenas no loop em execução no momento. Se o loop contendo a quebra está aninhado dentro de outro loop, o loop externo continua a iterar como controlado por sua própria expressão.

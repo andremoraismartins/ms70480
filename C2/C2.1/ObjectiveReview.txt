@@ -1,0 +1,8 @@
+1. C. for
+    -> C. Correct: The for loop provides iterative flow control.
+2. D. concat
+    -> D. Correct: The concat method combines the elements of two arrays into one array
+3. C. do…while loop
+    -> C. Correct: The do…while loop runs a Boolean condition after it runs once.
+4. B. break
+    -> B. Correct: The break keyword exits an iterative control loop.

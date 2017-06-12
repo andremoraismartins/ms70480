@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <script>
+            // Objetos de evento
+            var evnt = window.event;
+
+            // Manipulação de eventos declarativos
+            function declarativeHandler() {
+                alert("hello event. (declarativeHandler)");
+            }
+
+            // Manipulação de eventos de atribuição
+            window.onload = assignmentHandler();
+            function assignmentHandler() {
+                alert("hello event. (assignmentHandler)");
+            }
+
+            // Usando os métodos addEventListener e removeEventListener
+            window.addEventListener("load", onloadHandler, false);
+            window.addEventListener("load", onloadHandler2, false);
+            window.addEventListener("load", onloadHandler3, false);
+            function onloadHandler() {
+                alert("hello event 1.");
+            }
+            function onloadHandler2() {
+                alert("hello event 2.");
+            }
+            function onloadHandler3() {
+                alert("hello event 3.");
+            }
+            window.removeEventListener("load", onloadHandler2, false);
+
+            // Usando funções anônimas
+            window.addEventListener("load", function () {
+                document.getElementById("outer").addEventListener("click", outerDivClick, false);
+            }, false);
+
+            window.onload = function () {
+                var a = document.getElementById("aLink");
+                a.onclick = OverrideAnchorClick;
+            }
+            function OverrideAnchorClick() {
+                //do custom logic for the anchor
+                window.event.returnValue = false;
+                //or
+                //return false;
+            }
+        </script>
+    </head>
+    <body onload="declarativeHandler();">
+    </body>
+</html>
