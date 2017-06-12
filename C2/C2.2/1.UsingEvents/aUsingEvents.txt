@@ -42,5 +42,12 @@ Usando funções anônimas
 Cancelar um evento
 	- Pode ser útil quando você deseja substituir completamente a implementação da funcionalidade nativa de um elemento DOM.
 
+Declaração e tratamento de eventos borbulhados
+	- O último parâmetro do método addEventListener aceita um parâmetro booleano opcional. Este parâmetro permite que você especifique o efeito cascata ou borbulhante do evento, ou seja, em que ordem ocorre o processamento do evento.
+	- Quando true, usa cascata, o evento é capturado primeiramente pelo elemento mais distante e propagado para os elementos mais internos.
+	- Quando false, usa 
+	- With bubbling, the event is first captured and handled by the innermost element and then propagated to outer elements.
+	- With capturing, the event is first captured by the outermost element and propagated to the inner elements.
+
 Eventos
 	- onload é acionado quando o documento em si é totalmente carregado no navegador.

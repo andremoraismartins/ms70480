@@ -1,0 +1,5 @@
+Criando eventos personalizados
+    - Para criar um personalizado evento, você usar o objeto CustomEvent.
+    - O construtor de objeto CustomEvent aceita dois parâmetros:
+        - Nome do evento, isso deve representar o que o evento faz.
+        - Objeto dinâmico que contém uma propriedade de detalhe que pode ter propriedades atribuídas a ele contendo informações que devem ser passadas para o manipulador de eventos.

@@ -1,0 +1,59 @@
+Gerenciando eventos DOM
+    - O DOM fornece um grande número de eventos internos por meio da API JS, podendo definir funções como ouvintes de evento.
+
+Eventos de alteração
+    - Um evento de alteração ocorre quando o valor associado a um elemento é alterado.
+
+TIP
+    - Este exemplo usa a palavra-chave this. Nesse contexto, a palavra-chave this fornece uma referência direta ao elemento que criou o evento. Desta forma, isto fornece acesso directo ao elemento em vez de obter uma referência através de um dos métodos de procura de documentos.
+
+Eventos de foco
+    - Eventos de foco ocorrem quando um elemento recebe ou perde o foco.
+        - focus: Criado quando o elemento recebe o foco
+        - blur: Criado quando o elemento perde o foco
+        - focusin: Criado antes de um elemento receber o foco
+        - focusout: Criado antes de um elemento perder o foco
+
+Eventos de teclado
+    - Eventos de teclado ocorrem quando as teclas são pressionadas no teclado.
+        - Keydown: Levantado quando uma chave é empurrada para baixo.
+        - Keyup: Criado quando uma chave é liberada.
+        - Keypress: Criado quando uma tecla está completamente pressionada.
+    - Propriedades do objeto de evento para eventos de teclado
+        - Altkey: Um valor booleano para indicar se a tecla Alt foi pressionada
+        - Keycode: O código numérico da tecla que foi pressionada
+        - Ctrlkey: Um valor booleano se a tecla Control foi pressionada
+        - shiftkey: Um valor booleano se a tecla Shift foi pressionada
+
+TIP
+    - Em alguns casos, dependendo da chave, somente o evento keydown é acionado. As teclas de seta são um exemplo: keydown mas não keyup ou Keypress.
+
+Eventos de mouse
+    - O DOM fornece exposição extensiva à atividade do mouse através dos eventos do mouse.
+        - click: Criado quando o mouse executa um clique
+        - dbCLick: Criado quando o mouse executa um duplo clique
+        - Mousedown: Criado quando o botão do mouse é pressionado
+        - Mouseup: Criado quando o botão do mouse é liberado
+        - Mouseenter: ou mouseover Criado quando o cursor do mouse entra no espaço de um elemento HTML
+        - Mouseleave: Criado quando o cursor do mouse deixa o espaço de um elemento HTML
+        - mousemove: Criado quando o cursor do mouse se move sobre um elemento HTML
+    - Propriedades do objeto de evento para eventos de mouse
+        - clientX: A posição x ou horizontal do cursor do mouse em relação aos limites de viewport
+        - clientY: A posição y ou vertical do cursor do mouse em relação aos limites da viewport
+        - offsetX: A posição x ou horizontal do cursor do mouse em relação ao elemento de destino
+        - offsetY: A posição y ou vertical do cursor do mouse em relação ao elemento alvo
+        - screenX: A posição x ou horizontal do cursor do mouse em relação ao canto superior esquerdo da tela
+        - screenY: A posição y ou vertical do cursor do mouse em relação ao canto superior esquerdo da tela
+    
+Funcionalidade arrastar e largar DRAG-AND-DROP
+    - A funcionalidade arrastar e soltar permite que os usuários peguem um elemento com o mouse e o coloquem em outro local.
+        - Drag: Criado continuamente enquanto o elemento está sendo arrastado.
+        - Dragend: Levantado sobre o elemento sendo arrastado quando o mouse é liberado para terminar a queda da operação.
+        - Dragenter: Criado em um elemento de destino quando um elemento arrastado é arrastado para seu espaço.
+        - Dragleave: Criado em um elemento de destino quando um elemento arrastado deixa seu espaço.
+        - Dragover: Criado continuamente no elemento alvo enquanto o elemento arrastado está sendo arrastado por ela.
+        - Dragstart: Criado no elemento sendo arrastado quando a operação de arrastar está começando.
+        - Drop: Criado no elemento de destino quando o elemento arrastado é liberado.
+    - O primeiro evento é o dragstart, a medida que o elemento é arrastado os outros eventos são acionados e quando termina de arrastar aciona drop.
+    - Para que um elemento possa ser arrastado, ele deve ser draggable="true".
+    - O objeto DataTransfer é usado para guardar os dados que estão sendo arrastados durante uma operação de Drag e Drop (arrastar e soltar).

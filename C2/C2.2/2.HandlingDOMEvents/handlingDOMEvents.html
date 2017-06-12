@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <style>
+            .scale {
+                transform:scale(1.5);
+            }
+        </style>
+        <script>
+            window.onload = function () {
+                document.getElementById("aRange").addEventListener("change", rangeChangeEvent);
+                document.getElementById("aText").addEventListener("change", rangeChangeEvent);
+                function rangeChangeEvent() {
+                    document.getElementById("rangeValue").innerText = this.value;
+                }
+                document.getElementById("firstNameText").focus();
+                document.getElementById("firstNameText").addEventListener("blur", function () {
+                    if (this.value.length < 5) {
+                        document.getElementById("ruleViolation").innerText = 'First Name is required to be 5 letters.';
+                        document.getElementById("ruleViolation").style.color = 'red';
+                        this.focus();
+                    }
+                });
+                document.getElementById("firstNameText").addEventListener("keydown", function () {
+                    document.getElementById("outputText").innerText = window.event.keyCode;
+                });
+                document.onkeydown = function () {
+                    if (window.event.ctrlKey && String.fromCharCode(window.event.keyCode) == 'F')
+                        document.getElementById("firstNameText").focus();
+                    if (window.event.ctrlKey && String.fromCharCode(window.event.keyCode) == 'L')
+                        document.getElementById("lastNameText").focus();
+                    return false;
+                }
+                document.getElementById("yellowBox").addEventListener("mousemove", yellowBoxClick);
+                function yellowBoxClick() {
+                    console.log("Client X: " + window.event.clientX 
+                        + " ClientY: " + window.event.clientY, 
+                        "offsetX: " + window.event.offsetX 
+                        + " offsetY: " + window.event.offsetY, 
+                        "screen X: " + window.event.screenX 
+                        + " screenY: " + window.event.screenY);
+                }
+                document.getElementById("yellowBox2").addEventListener("mouseenter", yellowBoxEnter);
+                document.getElementById("yellowBox2").addEventListener("mouseleave", yellowBoxLeave);
+                function yellowBoxEnter() {
+                    this.classList.add("scale");
+                }
+                function yellowBoxLeave() {
+                    this.classList.remove("scale");
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <input id="aRange" type="range" max="200" min="0" value="0"/>
+        <br/>
+        <input id="aText" type="text"/>
+        <br/>
+        <div id="rangeValue"></div>
+        <br/>
+        <input id="firstNameText" type="text"/>
+        <input id="lastNameText" type="text"/>
+        <br/>
+        <div id="ruleViolation"></div>
+        <br/>
+        <div id="outputText"></div>
+        <br/>
+        <div id="yellowBox" style="width: 300px; height: 300px; border: solid;"></div>
+        <div id="yellowBox2" style="width: 50%;height:50%;margin: 0 auto; background-color:yellow;"></div>
+    </body>
+</html>

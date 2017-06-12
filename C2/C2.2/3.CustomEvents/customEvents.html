@@ -1,0 +1,16 @@
+<script>
+    myEvent = new CustomEvent( "anAction", {
+        detail: { 
+            description: "a description of the event",
+            timeofevent: new Date(),
+            eventcode: 2 
+        },
+        bubbles: true,
+        cancelable: true
+    });
+    document.addEventListener("anAction", customEventHandler);
+    document.dispatchEvent(myEvent);
+    function customEventHandler() {
+        alert(window.event.detail.description);
+    }
+</script>
