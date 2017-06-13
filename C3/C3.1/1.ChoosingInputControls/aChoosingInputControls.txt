@@ -1,0 +1,63 @@
+Escolhendo controles de entrada
+    - O elemento <input> em HTML denota controles de entrada e contém um atributo type que especifica o tipo de elemento de entrada a ser renderizado.
+    - As exceções à regra <input type = ''> são os elementos <textarea> e <button>, que possuem seu próprio suporte de elemento. 
+
+NOTA CONTROLES DE ENTRADA
+    - A especificação HTML5 define muitos mais controles de entrada do que são explicados neste livro. Este livro concentra-se especificamente nos controles agora suportados pelo Internet Explorer, seguido de exemplos menores para demonstrar alguns dos outros controles como suportados por outros navegadores como o Google Chrome.
+
+Elementos de entrada HTML5
+    - Color: Fornece um seletor de cores
+    
+    - Date: Fornece um seletor de data
+    
+    - DateTime: Fornece um seletor de data / hora
+    
+    - Month: Permite que os usuários selecionem um mês numérico e ano
+    
+    - Week: Permite que os usuários selecionem uma semana e um ano numéricos
+    
+    - Time: Permite aos usuários selecionar uma hora do dia
+    
+    - Number: Força a entrada a ser numérica
+    
+    - Range: Permite que os usuários selecionem um valor dentro de um intervalo usando uma barra deslizante
+        - min: valor mínimo permitido
+        - max: valor máximo permitido
+        - value: valor atual selecionado ou valor padrão.
+
+    - Tel: Formatos inseridos dados como um número de telefone
+    
+    - Text: campo de entrada em que os usuários podem inserir texto de forma livre, mas está limitado a uma 
+    única linha.    
+        - maxlength: define a quantidade de caracteres máximo permitido.
+    
+    - url: dados inseridos como um URL. Valida que o texto na caixa corresponde ao formato de um URL válido.
+    
+    - Radio: (HTML5) Permite que os usuários selecionem um único valor para uma lista de opções
+    
+    - Checkbox: (HTML5) Permite que os usuários selecionem vários valores em uma lista de opções]
+        - checked: atributo que define o estado do checkbox
+    
+    - Password: (HTML5) Captura uma senha e glifos os caracteres inseridos
+    
+    - Button: (HTML5) Permite que os usuários executem uma ação, como executar script
+        - value: texto do botão
+        - Dentro do elemento botão reside a capacidade de criar um botão altamente personalizado e obter comportamento padrão do navegador.
+
+    - Reset: (HTML5) Redefine todos os elementos HTML dentro de um formulário
+        - value: texto do botão
+    
+    - Submit: (HTML5) Envia os dados do formulário para um destino para processamento posterior
+        - value: texto do botão
+
+Dica de exame
+    - Você pode validar dados de muitas maneiras. Ainda mais opções ficam disponíveis em HTML5, como o tipo de entrada url. Também estão disponíveis o atributo padrão eo uso de expressões regulares em JavaScript. Ambos são discutidos mais adiante neste capítulo.
+
+Dica de exame
+    - Você não pode especificar o texto padrão em uma caixa de senha ou escrever para ele via JavaScript. Esta é uma garantia de segurança para ajudar a garantir a segurança das senhas. No entanto, os navegadores fornecem um mecanismo para armazenar uma senha se um usuário optar por ter a senha lembrada pelo navegador.
+
+Dica de exame
+    - A validação do tipo de entrada de e-mail confirma apenas que as informações inseridas correspondem ao formato esperado de um endereço de e-mail válido. De forma alguma verifica se o próprio endereço de e-mail é uma caixa de correio válida que pode receber mensagens.
+
+Dica de exame
+    - Qualquer coisa pode ser um "botão". Como a maioria dos elementos DOM tem um evento de clique ou pelo menos um evento mousedown e mouseup, o conceito de clicar pode ser capturado e ações personalizadas processadas. Isso pode inerentemente transformar qualquer parte do DOM em um "botão".

@@ -1,0 +1,6 @@
+1. A. $
+    -> A. Correct: The $ sign denotes the end of the string.
+2. B. allow-same-origin
+    -> D. Correct: Allows content from the containing HTML document
+3. B. JSDynamic
+    -> D. Correct: Credentials are passed only if the server requests them with a return code 401

@@ -1,0 +1,19 @@
+Fazendo controles somente leitura 
+    - readonly: apresentar informações aos usuários em elementos como caixas de texto, mas não quiser que eles sejam capazes de alterar esses dados. O processador não permitirá que os usuários alterem qualquer um dos dados na caixa de texto. 
+
+Fornecer um verificador ortográfico
+    - spellcheck: ajuda a fornecer feedback aos usuários de que uma palavra inserida está incorreta.
+
+Especificação de um padrão
+    - pattern: Para text boxes, é possível definir o atributo pattern com uma expressão regular e assim validar o campo.
+        - title: sempre que usar o pattern é necessário definit o title que é a mensagem exibida quando a validação falha.
+
+Dica de exame
+    - O atributo pattern aplica-se apenas a caixas de texto. Ele não pode ser usado para substituir a validação incorporada nos tipos de email ou url. Ao especificar o atributo pattern, você deve especificar o atributo title também. O atributo title especifica a mensagem de erro aos usuários na dica de ferramenta quando a validação falhar
+
+Usando o atributo placeholder
+    - placeholder: Permite que você solicite aos usuários o que é esperado em uma determinada caixa de texto.
+
+Fazendo controles necessários
+    - required: informa ao usuário que o campo é obrigatório e precisa ser preenchido.
+    

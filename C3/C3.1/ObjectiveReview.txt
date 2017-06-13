@@ -1,0 +1,10 @@
+1. C. checkbox
+    -> C. Correct: Check boxes allow multiple selections
+2. D. password
+    -> D. Correct: A password input type hides the characters being entered
+3. B. Submit
+    -> B. Correct: The submit button invokes the forms submit action
+4. D. <input type=”text” readonly/>
+    -> D. <input type=”text” readonly/>
+5. C. Add the required attribute on each control so that users get a message that the field is required
+    -> C. Correct: The required attribute ensures that a field contains a value before being submitted.

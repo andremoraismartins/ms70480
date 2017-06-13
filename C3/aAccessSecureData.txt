@@ -1,0 +1,5 @@
+Acesso e dados seguros
+    - Dados estáticos são gravados na marcação HTML, não alterado ou carregado por código, como JavaScript.
+        - Não fornece muito uma superfície de ataque para um usuário mal-intencionado. 
+    - Dados dinâmicos podem ser atualizados ou alterados dependendo das alterações do usuário com JS.
+        - Uma superfície de ataque é aberta e o tornam-se menos seguros.
