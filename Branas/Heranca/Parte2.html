@@ -1,0 +1,31 @@
+<script>
+    var Homem = function (nome, idade){
+        this.nome = nome;
+        this.idade = idade;
+        // this.sexo = 'masculino'; // Cada objeto terá sexo masculino
+    }
+
+    Homem.prototype.sexo = "masculino"; // Todos terão a mesma propriedade sexo masculino
+
+    var joao1 = new Homem("joao1", 20);
+    console.log(joao1);
+
+    var pedroCall = {};
+    Homem.call(pedroCall, "pedroCall", 18);
+    console.log(pedroCall);
+
+    var pedroApply = {};
+    Homem.apply(pedroApply, ["pedroApply", 18]);
+    console.log(pedroApply);
+
+    var _new = function (f){
+        console.log(arguments); // Argumentos informados
+        var obj = {}; // Novo objeto vazio
+        obj.__proto__ = f.prototype; // O prototipo do objeto será o mesmo da função, ou seja, herda da função
+        f.apply(obj, Array.prototype.slice.call(arguments, 1)); // Aplicar os argumentos recebidos ao objeto criado, ou seja, cria as propriedades desse objeto
+        return obj;
+    }
+    var pedroNew = _new(Homem, "Pedro _new", 18);
+    console.log(pedroNew);
+
+</script>

@@ -1,0 +1,48 @@
+- As expressões regulares são estruturas formadas por uma sequência de caracteres que especificam um padrão formal.
+- Util para:
+    - Validação de campos
+    - Extração de dados
+    - Substituição de caracteres em textos
+- Criar regex entre // ou new RegExp()
+
+- RegExp API
+    - exec: executa a regexp, retornando os detalhes
+    - teste: testa a regexp, retornando true or false
+
+- O padrão do regex pode ser encontrado em qualquer parte da string
+
+- Caracteres especiais em RegExp
+    - \: skip caracter
+    - ^: inicia com um caracter definido
+    - $: finaliza com um determinado caractere
+    - ?: Zero ou um
+    - *: Zero ou mais
+    - +: Um ou mais
+    - []: Grupos de caracteres
+        - [^]: Negação
+        - [abc] - Aceita qualquer caractere do grupo, nesse caso a,b,c
+        - [^abc] - Não aceita qualquer caractere dentro do grupo, nesse caso a,b,c
+        - [0-9] - Aceita qualquer caractere entre 0 e 9
+        - [^0-9] - Não aceita qualquer caractere entre 0 e 
+    - {}: Quantificadores podem ser aplicados a caracteres, grupos, conjuntos ou metacaracteres.
+        - {n}: Quantifica um número específico
+        - {n,}: Quantifica um mínimo
+        - {n,m}: Quantifica um mínimo e máximo
+    - Metacaracteres:
+        - .: qualquer caractere
+        - \w: conjunto [a-zA-Z0-9]
+        - \W: conjunto [^a-zA-Z0-9]
+        - \d: conjunto [0-9]
+        - \D: conjunto [^0-9]
+        - \s: espaço em branco
+        - \S: não espaço em branco
+        - \n: quebra de linha
+        - \t: tab
+    - String API:
+        - match: busca uma string e retorna os dados encontrados
+        - split: divide a string com base em outra string ou regex
+        - replace: substitui partes da string com base em outra string ou regex
+    - Modificadores:
+        - i: case-insensitive matching
+        - g: global matching
+        - m: multiline matching

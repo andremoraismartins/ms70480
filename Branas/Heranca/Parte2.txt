@@ -5,3 +5,5 @@
 
 - Funções tem a propriedade prototype
 - Objetos tem a propriedade __proto__
+
+- Quando criamos funções construtora, as propriedades definidas dentro da função serão únicas de cada objeto. Porém para definir uma propriedade única para todos que será herdada, é necessário colocá-la no prototype da função, pois sseus objetos herdam seu prototipo.

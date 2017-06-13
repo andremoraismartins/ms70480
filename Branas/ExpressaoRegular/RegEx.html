@@ -1,0 +1,73 @@
+<script>
+    var regExp1 = /abc/;
+    var regExp2 = new RegExp("abc");
+
+    var r1 = /9999-9999/;
+    var t1 = "9999-9999";
+    console.log("Exec1", r1.exec(t1));
+    console.log("Test1", r1.test(t1));
+
+    var r2 = /\(48\) 9999-9999/;
+    var t21 = "(48) 9999-9999";
+    var t22 = "O telefone é (48) 9999-9999, tratar com João";
+    console.log("Exec21", r2.exec(t21));
+    console.log("Test21", r2.test(t21));
+    console.log("Exec22", r2.exec(t22));
+    console.log("Test22", r2.test(t22));
+
+    var r3 = /^\(48\) 9999-9999$/;
+    var t31 = "(48) 9999-9999";
+    var t32 = "O telefone é (48) 9999-9999, tratar com João";
+    console.log("Exec31", r3.exec(t31));
+    console.log("Test31", r3.test(t31));
+    console.log("Exec32", r3.exec(t32));
+    console.log("Test32", r3.test(t32));
+
+    var r4 = /^\([0-9][0-9]\) [0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]$/;
+    var t4 = "(80) 9876-1234";
+    console.log("Exec4", r4.exec(t4));
+    console.log("Test4", r4.test(t4));
+
+    var r5 = /^\([0-9]{2}\) [0-9]{4}-[0-9]{4}$/;
+    var t5 = "(80) 9876-1234";
+    console.log("Exec5", r5.exec(t5));
+    console.log("Test5", r5.test(t5));
+
+    var r6 = /^\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}$/;
+    var t61 = "(80) 9876-1234";
+    var t62 = "(80) 99876-1234";
+    console.log("Exec61", r6.exec(t61));
+    console.log("Test61", r6.test(t61));
+    console.log("Exec62", r6.exec(t62));
+    console.log("Test62", r6.test(t62));
+
+    var r7 = /^\([0-9]{2}\) [0-9]{4,5}-?[0-9]{4}$/;
+    var t71 = "(80) 99877-1234";
+    var t72 = "(80) 998771234";
+    console.log("Exec71", r7.exec(t71));
+    console.log("Test71", r7.test(t71));
+    console.log("Exec72", r7.exec(t72));
+    console.log("Test72", r7.test(t72));
+
+    var r8 = /<table><tr>(<td>\([0-9]{2}\) [0-9]{4,5}-?[0-9]{4}<\/td>)+<\/tr><\/table>/;
+    var t8 = "<table><tr><td>(80) 999778899</td><td>(90) 99897-8877</td><td>(70) 98767-9999</td></tr></table>";
+    console.log("Exec8", r8.exec(t8));
+    console.log("Test8", r8.test(t8));
+
+    var r9 = /<table><tr>(<td>\(\d{2}\)\s\d{4,5}-?\d{4}<\/td>)+<\/tr><\/table>/;
+    var t9 = "<table><tr><td>(90) 999779999</td><td>(90) 99997-9977</td><td>(70) 99767-9999</td></tr></table>";
+    console.log("Exec9", r9.exec(t9));
+    console.log("Test9", r9.test(t9));
+
+    var r10 = /\(\d{2}\)\s\d{4,5}-?\d{4}/;
+    var t10 = "<table><tr><td>(90) 999779999</td><td>(90) 99997-9977</td><td>(70) 99767-9999</td></tr></table>";
+    console.log("Exec10", t10.match(r10));
+
+    var r11 = /\(\d{2}\)\s\d{4,5}-?\d{4}/g;
+    var t11 = "<table><tr><td>(90) 999779999</td><td>(90) 99997-9977</td><td>(70) 99767-9999</td></tr></table>";
+    console.log("Exec11", t11.match(r11));
+
+    var r12 = /\(\d{2}\)\s\d{4,5}-?\d{4}/g;
+    var t12 = "<table><tr><td>(90) 999779999</td><td>(90) 99997-9977</td><td>(70) 99767-9999</td></tr></table>";
+    console.log("Exec12", t12.replace(r12, "telefone"));
+</script>
