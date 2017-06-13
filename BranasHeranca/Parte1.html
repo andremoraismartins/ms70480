@@ -1,0 +1,57 @@
+<script>
+    var homem = {
+        sexo: "masculino"
+    }
+    var joao = {
+        nome: "Joao",
+        idade: 20,
+        __proto__: homem
+    }
+    var pedro = {
+        nome: "Pedro",
+        idade: 18,
+        __proto__: homem
+    }
+    console.log(joao, pedro);
+
+    var joao2 = {
+        nome: "joao2",
+        idade: 20
+    }
+    Object.setPrototypeOf(joao2, homem);
+    var pedro2 = {
+        nome: "pedro2",
+        idade: 18
+    }
+    Object.setPrototypeOf(pedro2, homem);
+    console.log(joao2, pedro2);
+
+    var joao3 = Object.create(homem);
+    joao3.nome = "joao3";
+    joao3.idade = 20;
+    var pedro3 = Object.create(homem);
+    pedro3.nome = "pedro3";
+    pedro3.idade = 18;
+    console.log(joao3, pedro3);
+
+    var joaoShadow = {
+        nome: "joaoShadow",
+        idade: 20,
+        sexo: "feminino"
+    }
+    Object.setPrototypeOf(joaoShadow, homem);
+    console.log(joaoShadow, joaoShadow.sexo);
+    delete joaoShadow.sexo;
+    console.log(joaoShadow, joaoShadow.sexo);
+
+    // Não exibe sexo
+    console.log(Object.keys(joaoShadow).join(', '));
+    // Exibe o sexo
+    var ps1 = '', ps2 = '';
+    for(var p in joaoShadow)
+        ps1 += p + ', ';
+    for(var p in joaoShadow)
+        if (joaoShadow.hasOwnProperty(p)) // É possível validar se a propriedade é do objeto ou do prototipo
+            ps2 += p + ', ';
+    console.log(ps1, ps2);
+</script>

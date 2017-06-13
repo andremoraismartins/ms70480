@@ -1,0 +1,11 @@
+- Um objeto é uma coleção dinamica de chaves e valores, que podem ser de qualquer tipo, e um protótipo que pode ser um objeto ou null.
+- A propriedade __proto__ é uma referencia para o prototipo do objeto. Não é padrão e pode não funcionar.
+- Prefira a utilização de Object.getPrototypeOf e Object.setPrototypeOf para interagir com o protótipo do objeto.
+- Também é possível utilizar Object.create para determinar o protótipo do objeto.
+
+Shadow
+    - Os interpretadores buscam as propriedades em cascata, ou seja, procuram no primeiro objeto, se não existir procuram no prototipo desse objeto e assim sucessivamente. 
+    - Se a propriedade não existir e nenhum objeto e seus prototipos, o retorno será undefined.
+    - Ao encontrar a propriedade pela primeira vez já retorna seu valor, mesmo que em seus prototipos existam outras definições dessa propriedade.
+
+- Com Object

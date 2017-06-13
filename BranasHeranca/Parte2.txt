@@ -1,0 +1,7 @@
+- O operador new cria um novo objeto por meio de uma função construtora.
+- Quando usamos new, this será setado de acordo com o contrutor do objeto.
+- Mas é possível usar a função call em uma classe, aonde passamos um objeto que será usado como this e então informamos os parâmetros necessários para o construtor.
+- Também é possível usar o apply como usamos o call, porém os parâmetros do construtor devem ser passados em um array.
+
+- Funções tem a propriedade prototype
+- Objetos tem a propriedade __proto__
