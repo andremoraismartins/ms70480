@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+        <script>
+            $("#Button1").click(function () {  });
+            $("#Button2").click(function () {  });
+            $("#Button3").click(function () {  });
+            $("document").ready(function () {
+                $("#Button1").click(function () {
+                    DoLongTask($("#inputValue").val(), function (result, data) {
+                        if (result == "SUCCESS")
+                            alert(data + " is a Success");
+                        else
+                            alert(data + " is a fail");
+                    });
+                });
+            });
+            function DoLongTask(n, f) {
+                if (n < 10)
+                    f("SUCCESS", n);
+                else
+                    f("FAIL", n);
+            }
+        </script>
+    </head>
+</html>

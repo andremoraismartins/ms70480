@@ -1,0 +1,8 @@
+1. C. wsConnection = new WebSocket(‘wss://studygroup.70480.com’,[‘soap’,’xmpp’]);
+    -> C. Correct: wss or ws is a valid protocol to create a WebSocket.
+2. C. wsConnection.onmessage = function(msg){...};
+    -> C. Correct: wsConnection.onmessage receives the resulting data.
+3. B. url, cache, datatype, success
+    -> C. Correct: url, datatype, and onsuccess are required.
+4. A. It allows you to assign the event listener to many elements at once via the selector syntax.
+    -> A. Correct: Wiring up events with jQuery allows you to assign the event listener to many elements at once by using the selector syntax.

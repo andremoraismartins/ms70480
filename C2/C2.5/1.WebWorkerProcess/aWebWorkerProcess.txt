@@ -1,0 +1,38 @@
+Introdução a WebWorker process
+    - A API do Web Worker permite que você especifique que peças de trabalho devem ser processadas em seu próprio thread.
+    - O problema com este código é que, embora o trabalho de matemática está ocorrendo, a interação bola é bloqueada completamente. A bola pára de se mover ea entrada do usuário é aparentemente ignorada até que a chamada de matemática retorna.
+
+Criando um processo de trabalho com a API do WebWorker
+    - A API do Web Worker é baseada na estrutura de mensagens de JavaScript, permitindo o envio de parâmetros para um worker e o envio de resultados de volta.
+    - Um webWorker básico é estabelecido criando um arquivo separado para conter o script que será processado em outra thread.
+    - O objeto Worker está disponível a partir do namespace global e ao instânciá-lo é necessário informar o arquivo que contém o código (script).
+    - Métodos:
+        - postMessage(message): Inicia o processo do worker. 
+            - message (Required): os dados para passar ao worker. Se não for necessário, forneça uma String vazia.
+        - terminate(): Interrompe o processo de trabalho de continuar.
+        - onMessage(func): Especifica a função para o worker chamar de volta quando concluído.
+            - func(evt): recebe um EventData
+                - evt: contém a propriedade data que contem os valores.
+        - onerror(func): Especifica uma função para chamar quando ocorre um erro no segmento de trabalho. 
+            - func(evt):recebe um EventData
+                - evt: contém as propriedades:
+                    - message: mensagem textual do erro
+                    - filename: o nome do arquivo que aconteceu o erro
+                    - lineno: o número da linha no arquivo que criou o erro
+    - Ao instanciar o Worker ele está disponível para uso a qualquer momento, mas não está iniciado. Para iniciá-lo use o postMessage.
+    - O evento onmessage deve ser configurado antes de iniciar o trabalhador, porém ele só será executado após o worker estar terminado.
+    - A palavra-chave self é semelhante à palavra-chave this. O processo de trabalho é executado em seu próprio contexto, o que significa que ele tem seu próprio namespace global. A palavra-chave self dá acesso ao namespace global dentro do processo de trabalho.
+    
+Compreendendo as limitações do web worker
+    - Passando parâmetros:
+        - O postMessage aceita um parâmetro string que será passado ao worker. Portanto, é possivel transformar dados em JSON ou XML, mas não é possível passar funções.
+    - Número de wokers:
+        - Não existem limites de webWorkers simultaneos, porém criar webWorkers é pesado e é necessário ter atenção a quantidade usada.
+    - Acesso DOM
+        - Os workers operam em seu proprio contexto global, portanto não tem acesso ao DOM da página que os invocou. Também não tem acesso ao objeto window, document ou qualquer objeto pai.
+    - Subworkers
+        - Workers podem criar outros workers e por isso é importante controlar o número de workers que serão criados.
+
+Configurando tempos limite e intervalos
+    - O método setTimeout chama uma função especificada após o atraso especificado.
+    - O setInterval chama a função especificada repetidamente após cada intervalo de tempo especificado.

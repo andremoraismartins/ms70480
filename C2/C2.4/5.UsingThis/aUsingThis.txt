@@ -1,0 +1,3 @@
+Usando ponteiro this
+    - é um objeto especial fornecido pelo framework jQuery.
+    - Ao executar seleções no DOM usando jQuery, this se refere ao objeto que ele encontra ou à coleção de objetos que ele encontra.

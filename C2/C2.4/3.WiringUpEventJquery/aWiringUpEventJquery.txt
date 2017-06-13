@@ -1,0 +1,4 @@
+Ligando um evento com jQuery
+    - A sintaxe do seletor jQuery é usada para encontrar os elementos e então é possível atribuir funções aos eventos do elemento.
+    -  Além de ser compatível com vários navegadores, ele inclui muita flexibilidade na maneira como os manipuladores de eventos são atribuídos a objetos.
+    -  JQuery fornece capacidades de seletor avançadas que permitem controle fino sobre como o DOM é manipulado.

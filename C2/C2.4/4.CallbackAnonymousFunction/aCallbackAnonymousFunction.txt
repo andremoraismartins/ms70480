@@ -1,0 +1,5 @@
+Implementando um callback com uma função anônima
+    - Em JavaScript, as funções são consideradas objetos e são freqüentemente citadas como cidadãos de primeira classe. Isso significa que uma variável pode ser atribuída a uma função, ou uma função pode ser passada para outra função como um parâmetro.
+    - São chamadas funções anônimas quando não tem nome.
+    - Cada botão tem sua própria função inline, onde a implementação pode ser personalizada para cada clique de botão.
+    - Funções de retorno de chamada podem existir estaticamente com um nome ou ser fornecidas inline dinamicamente como anônimo.

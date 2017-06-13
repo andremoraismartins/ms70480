@@ -1,0 +1,25 @@
+Implementação de comunicação bidirecional com o API do WebSocket
+    - A WebSocket API fornece suporte de comunicação bidirecional para seus aplicativos da Web.
+    -  O uso da API do WebSocket permite a conexão diretamente a um servidor em um soquete sendo uma conexão de peso muito mais leve e totalmente bidirecional.
+    - O uso da API do WebSocket é ideal para aplicativos em tempo real.
+    - Os dados transmitidos através do WebSockets podem ser baseados em texto ou binários.
+    - O objeto principal com o qual você trabalhará é o objeto WebSocket, que se conecta ao soquete quando seu construtor é invocado.    
+    - O construtor WebSocket aceita dois parâmetros:
+        - O URL do socket do lado do servidor para se conectar, que é sempre prefixado com ws ou wss para conexões WebSocket seguras.
+        - Uma lista opcional de subprotocolos.
+    - Quando o construtor é chamado, tenta estabelecer conexão com o servidor e duas coisas podem acontecer:
+        - onopen: conectou com êxito ao servidor 
+        - onerror(error): a conexão falhou, resultando em um erro. Este evento pode acontecer a qualquer momento, não apenas ao estabelecer a conexão inicial.
+    - Para receber e enviar mensagens, fornece:
+        - send(message): envia o message para o servidor
+        - onmessage(message): recebe o message com a mensagem enviada pelo servidor.
+    - Para evitar um erro, a propriedade readyState contem o status da conexão atual:
+        - Open: A conexão está aberta
+        - Connecting: (DEFAULT) A conexão está em processo de conexão e ainda não está pronta para uso.
+        - Closing: A conexão está em processo de fechamento.
+        - Closed: A conexão esta fechada.
+    - Para finalizar conexões:
+        - close(num, razao): Finalizar um conexão, os parâmetros de codigo númerico e razão são opicionais.
+        - onclose(): evento executado quando uma conexão é finalizada.
+
+    - wss or ws is a valid protocol to create a WebSocket.

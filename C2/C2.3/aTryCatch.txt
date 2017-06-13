@@ -1,0 +1,19 @@
+Try
+    - A parte try, diz: "Tente fazer este trabalho."
+
+Catch
+    - O bloco catch é onde o erro pode ser tratado conforme apropriado para o aplicativo. O bloco catch recebe um parâmetro que é um objeto de exceção
+    - Propriedades disponíveis no objeto de exceção
+        - Message: Uma descrição textual do erro que ocorreu.
+        - Number: Um código de erro numérico.
+        - Name: O nome do objeto de exceção.
+
+Finally
+    - O significado do bloco finally é que o código dentro dele é executado o tempo todo. Isso não quer dizer que o código no bloco finally não pode ter seus próprios erros resultando em exceções, mas se o código no bloco try tem ou não um erro, o código no bloco finally ainda é executado.
+
+- O escopo de variável se aplica a cada bloco dentro do bloco try ... catch.
+- A exceção borbulha até o método chamador, o próximo método na pilha. Isso continua através da pilha até que um manipulador de exceção seja atendida ou o navegador recebe a exceção e trata-a como uma exceção não tratada.
+- O conceito de levantar um erro também é conhecido como lançando uma exceção.
+- O construtor de objeto Error leva dois parâmetros, nesta ordem:
+    - o número de erro 
+    - uma descrição de erro

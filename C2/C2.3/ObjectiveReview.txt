@@ -1,0 +1,6 @@
+1. A. Proper error handling allows code processing to continue and to provide appropriate user feedback. 
+    -> A. Correct: By using structured error handling, you can provide feedback to users and handle unknown situations properly.
+2. B. description
+    -> B. Correct: description isn’t a valid property.
+3. A. Checking for null prevents the use of an object before it’s initialized.
+    -> A. Correct: Checking for null prevents the use of an object before it initializes and prevents unexpected results.

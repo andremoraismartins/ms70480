@@ -1,0 +1,15 @@
+Tornar as páginas dinâmicas com jQuery e AJAX
+    - JQuery é uma biblioteca de JavaScript que se especializa em trabalhar com o DOM para tornar as páginas web dinâmicas.
+    - JQuery e AJAX para fazer solicitações de servidor para recuperar conteúdo atualizado para suas páginas.
+    - O uso de AJAX resolveu isso permitindo que você faça solicitações do lado do servidor via JavaScript sem ter que atualizara página inteira.
+    - Parâmetros AJAX:
+        - url (Required) que a chamada AJAX está solicitando. Por razões de segurança, para evitar scripts entre sites, esse URL deve estar dentro do mesmo domínio da página da web.
+        - cache, é opcional e indica se a chamada pode usar uma cópia em cache.
+        - dataType (Required) indica o tipo de dados esperado, que pode ser XML ou JavaScript Object Notation (JSON), por exemplo.
+        - type para alterar o verbo utilizado por uma chamada
+        - success (Required) assume uma função que os resultados das chamadas AJAX devem ser passados para ele.
+        - error para que quaisquer condições de erro podem ser tratadas com graça, recebendo:
+            - O pedido HTTP em si
+            - O número de erro HTTP (como 404)
+            - O texto de erro (como não encontrado)
+    - O jQuery AJAX toolkit suporta não apenas a obtenção de dados, mas também a postagem de dados no servidor.

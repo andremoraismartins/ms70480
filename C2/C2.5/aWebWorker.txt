@@ -1,0 +1,2 @@
+Criar um processo de Web worker
+    - O JavaScript é um ambiente de thread único. Tudo executado em JavaScript está em fila de forma síncrona.

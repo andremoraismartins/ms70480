@@ -1,0 +1,4 @@
+Implementar um call-back
+    - Um padrão de design para implementar quando estiver trabalhando assincronamente.
+    - A idéia de um retorno de chamada é chamar uma função para executar, mas é feito para chamar de volta uma função especificada com geralmente algum tipo de resultado ou status da operação.
+    - Outro uso comum para callbacks é com eventos. Sempre que um evento DOM é disparado, ele está usando um padrão de retorno de chamada.

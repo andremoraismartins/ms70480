@@ -1,0 +1,10 @@
+1. C. close
+    -> C. Correct: close isn’t a method on the web worker.
+2. B. terminate
+    -> B. Correct: terminate cancels a web worker
+3. B. In any <script> block in the page
+    -> C. Correct: The code must be in its own JavaScript file, and the name of the file is passed to the web worker as a parameter.
+4. C. A limitless number of workers
+    -> C. Correct: There is no limit on the number of workers that can be created. However, too many will result in performance issues.
+5. D. setInterval(function(){ worker.postMessage(“”);}, 30000);
+    -> Correct: setInterval(function(){ worker.postMessage(“”);}, 30000); calls the passed-in function every interval as specified by the second parameter in milliseconds.
