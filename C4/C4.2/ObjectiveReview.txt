@@ -1,0 +1,13 @@
+1. C. div{height: 50cm; width: 50px; 
+    -> D. Correct: div{height: 50ft; width: 50ft;} ft is not a valid unit of measurement.
+2. A. border-top: 5px dotted blue;
+        border-right: 5px solid green;
+        border-left: 3px dashed red;
+        border-bottom: 10px double black;
+    -> A. Correct: Each side will be styled differently and the syntax is correct.
+3. B. margin, border, padding
+    -> B. Correct: Margin, border, padding is the correct sequence
+4. C. box-shadow: gray 5px -5px;
+    -> A. Correct: box-shadow: gray 5px 5px; will apply a box shadow to the right and bottom edge of a div element.
+5. A. absolute
+    -> B. Correct: Fixed positioning is the correct answer. 

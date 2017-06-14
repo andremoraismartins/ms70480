@@ -1,0 +1,6 @@
+1. D. {firstName: “Rick”, lastname: “Delorme”, hairColor: “brown”, eyeColor: “brown”}
+    -> D. Correct: A JSON string is a series of name/value pairs where the name of the property is followed by a colon and a quoted string. Multiple name value pairs are comma separated.
+2. A. Response
+    -> C. Correct: responseText provides the result as text that’s human readable.
+3. D. When the server sends a security response requesting the credentials
+    -> D. Correct: Credentials are passed only if the server requests them with a return code 401.

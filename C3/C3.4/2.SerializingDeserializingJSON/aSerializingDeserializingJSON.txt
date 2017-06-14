@@ -1,0 +1,8 @@
+Serialização e desserialização de dados JSON
+    - O objeto JSON está disponível para converter uma seqüência de caracteres JSON para um objeto (serializar / desserializar).
+    - JSON.stringify: serializar objetos (convert to JSON)
+        - recebe um objeto
+        - devolve uma string com o objeto serializado
+    - JSON.parse: desserializar uma string em objeto (convert to object)
+        - recebe uma string
+        - devolve um objeto desserializado

@@ -1,0 +1,7 @@
+1. C. var o = JSON.parse(jsonString);
+    -> C. Correct: This method is used to deserialize a JSON string into an object.
+2. D. request.responseType = ‘blob’;
+    -> D. Correct: The response object’s responseType property must be set to ‘blob’
+3. B. Handle the submit event of the form.
+   D. Ensure that all elements on the form have a name.
+    -> B. Correct: Handling the submit event on the form allows you to intercept the form before submitting and perform custom actions with it.

@@ -1,0 +1,6 @@
+1. B. font-weight: heavy; 
+    -> B. Correct: font-weight: heavy; heavy is not a valid option for font-weight. 
+2. D. justify
+    -> D. Correct: Justify will align the text such that each line takes up the width of the box.
+3. C. word-spacing 
+    -> C. Correct: word-spacing will set the amount of space between words.

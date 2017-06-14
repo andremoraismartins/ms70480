@@ -1,0 +1,6 @@
+Aplicando estilos a hifenização de texto
+    - Aplicar estilos a hifenização de texto permite que você controle como uma frase ou palavra quebra no final da linha.
+    - hyphens: 
+        - None: As palavras não irão quebrar com um hífen e a frase só quebrará em espaço em branco.
+        - Auto: As palavras automáticas irão quebrar com base em um algoritmo predefinido.
+        - Manual: As palavras manuais irão quebrar com base nas dicas especificadas nas palavras indicando um espaço apropriado para o pausa. Isso é feito usando o &shy; Notação.

@@ -1,0 +1,5 @@
+Aplicar estilos para estabelecer e alterar a posição de um elemento
+    - position:
+        - fixed: os elementos são colocados em relação à janela do navegador
+        - relative: os elementos são posicionados em relação à sua posição em fluxo normal
+        - absolute: o elemento é posicionado em relação ao seu primeiro elemento pai.

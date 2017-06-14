@@ -1,0 +1,26 @@
+CSS2 Introduziu Media Types
+    - @media possibilitava definir diferentes estilos para diferentes tipos de media, ou seja, era possível definir estilos diferentes para telas de computadores, impressoras, devices, televisões e etc; Porém esses tipos de media nunca tiveram muito suporte pelos devices.
+
+CSS3 Introduz Media Queries
+    - Media queries estende a idéia dos media types, mas ao invés de procurar o tipo do dispositivo, eles olham as capacidades do dispositivo, como por exemplo:
+        - width and height of the viewport
+        - width and height of the device
+        - orientation (is the tablet/phone in landscape or portrait mode?)
+        - resolution
+
+Media Query Syntax
+    - A media query consists of a media type and can contain one or more expressions, which resolve to either true or false.    
+    @media not|only mediatype and (expressions) {
+        CSS Code;
+    }
+    @media screen and (min-width: 480px) {
+        body {
+            background-color: lightgreen;
+        }
+    }
+
+CSS3 Media Types
+    - all: Used for all media type devices
+    - print: Used for printers
+    - screen: Used for computer screens, tablets, smart-phones etc.
+    - speech: Used for screenreaders that "reads" the page out loud

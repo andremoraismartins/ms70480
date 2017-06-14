@@ -1,1 +1,7 @@
 Consumindo dados JSON e XML usando serviços da Web
+    - JSON
+        - dados não estruturados
+        - usa uma sintaxe especial que permite a definição de pares de valor de nome em um formato de seqüência leve
+    - XML
+        - dados estruturados
+        - é mais estruturado que o JSON com tags nomeadas e tags de abertura e fechamento, e as tags podem ter atributos

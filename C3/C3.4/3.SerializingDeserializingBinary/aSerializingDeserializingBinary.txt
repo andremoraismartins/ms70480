@@ -1,0 +1,8 @@
+Serialização e desserialização de dados binários
+    -  A diferença chave agora é que a propriedade responsetype deve ser definida como blob.
+        - xReq.responseType = 'blob';
+    - O método createObjectURL dá ao elemento img uma URL ligando ao BLOB ea imagem é exibida no navegador.
+
+Usando o método Form.Submit
+    - O elemento de formulário de uma página HTML é a área do formulário que contém elementos que normalmente são controles de entrada para coletar informações de usuários.
+    - Atributo action: que informa o formulário onde enviar seus dados.

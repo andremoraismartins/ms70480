@@ -1,0 +1,17 @@
+<script>
+    var xReq = new XMLHttpRequest();
+    xReq.open("GET", "orange.jpg", false);
+    xReq.responseType = 'blob';
+    xReq.send(null);
+    var blob = xReq.response;
+    document.getElementById("result").src = URL.createObjectURL(blob);
+
+    var xReq = new XMLHttpRequest();
+    xReq.open("POST", "saveImage.aspx", false);
+    xReq.responseType = 'blob';
+    xReq.send(data);
+</script>
+<body>
+    <form id="signupForm" action="processSignUp.aspx">
+    </form>
+</body>

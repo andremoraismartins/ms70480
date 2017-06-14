@@ -1,0 +1,2 @@
+Enviando dados usando XMLHttpRequest
+    - Para enviar dados, o método send deve ter dados passados para ele, e esses dados podem ser transmitido para o ponto de extremidade especificado no URL do método open.

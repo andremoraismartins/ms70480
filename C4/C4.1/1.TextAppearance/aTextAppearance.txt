@@ -1,0 +1,21 @@
+Aplicar estilos à aparência do texto
+Aplicando cor ao texto
+    - A cor do texto pode ser alterada, especificando a propriedade color para o elemento CSS que aceita:
+        - Valor hexadecimal: #00FF00 - Os dois primeiros dígitos são o valor para Vermelho, os dois segundos dígitos são o valor para Verde, e os dois últimos dígitos são o valor para Azul.
+        - Nome da cor: Use uma palavra para especificar o valor da cor, como green para exibir o verde do texto.
+        - Função RGB: use a função RGB, que leva três valores:
+            - [0-255]: quantidade de vermelho
+            - [0-255]: quantidade de verde
+            - [0-255]: quantidade de azul
+
+Aplicando negrito ao texto
+    - font-weight: lighter, normal, bold, and bolder. Além disso, os valores numéricos 100 (mais claro) a 900(mais escuro) são suportados
+
+Aplicar estilo itálico ao texto
+    - font-style: normal, italic, oblique.
+
+Aplicar estilos à fonte de texto
+    - Você pode alterar o tipo de letra e controlar o tamanho do texto.     
+    - font-family: Nome da fonte
+    - Para usar fontes personalizadas (WOFF - Web Open Font Format) em sua página da Web, defina uma família de fontes usando a palavra-chave especial @font-face.
+    - font-size aceita valores relativos que quando renderizados são relativos ao tamanho de texto padrão no navegador.

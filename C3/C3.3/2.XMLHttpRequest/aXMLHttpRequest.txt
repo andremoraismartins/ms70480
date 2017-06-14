@@ -1,0 +1,35 @@
+Usando o objeto XMLHttpRequest
+    - O JavaScript fornece suporte interno para receber dados HTML através do objeto XMLHttpRequest
+    - XMLHttpRequest faz uma solicitação HTTP e espera receber dados de volta em formato XML
+    - As chamadas síncronas e assíncronas são suportadas
+    - Eventos disponíveis do objeto XMLHttpRequest
+        - Onreadystatechange: Define um manipulador de eventos para quando o estado da solicitação foi alterado. Usado para chamadas assíncronas.
+        - Ontimeout: Define um manipulador de eventos para quando a solicitação não pode ser concluída.
+    - Métodos disponíveis do objeto XMLHttpRequest
+        - Abort: Cancela o pedido atual
+        - getAllResponseHeaders: Fornece uma lista completa de cabeçalhos de resposta
+        - getResponseHeader: Retorna o cabeçalho de resposta específico
+        - Send: Faz o pedido HTTP e recebe a resposta
+        - setRequestHeader: Adiciona um cabeçalho HTTP personalizado ao pedido
+        - Open: Define propriedades para a solicitação, como URL, nome de usuário e senha
+            - Parametros
+                - Method: O método HTTP que está sendo usado para a solicitação: GET, POST, etc.
+                - url: URL para fazer o pedido para.
+                - Async: Um valor booleano para indicar se a chamada deve ser feita de forma assíncrona. Se true, um manipulador de eventos precisa ser definido para o onreadystatechanged.
+                - UserName: Um nome de usuário se o destino exigir credenciais.
+                - Password: Uma senha se o destino exigir credenciais.
+
+    - Propriedades disponíveis do objeto XMLHttpRequest
+        - readyState: Obtém o estado atual do objeto
+        - Response: Obtém a resposta retornada do servidor
+        - responseBody: Obtém o corpo da resposta como uma matriz de bytes
+        - responseText: Obtém o corpo da resposta como uma seqüência de caracteres
+        - responseType: Obtém o tipo de dados associado à resposta, como blob, texto, arraybuffer, ou documento
+        - responseXML: Obtém o corpo da resposta como um objeto XML DOM
+        - Status: Obtém o código de status HTTP da solicitação
+        - statusText: Obtém o texto HTTP amigável que corresponde ao status
+        - Timeout: Define o limite de tempo limite no pedido
+        - withCredentials: Especifica se a solicitação deve incluir credenciais de usuário
+
+Dica de exame
+    - O método open não faz nenhuma solicitação de servidor. Se o nome de usuário ea senha for especificado, ele não enviará essas informações para o servidor no método open. Quando o método de send é chamado, o nome de usuário e senha também não são passados para o servidor. As credenciais são passadas para o servidor apenas em resposta a uma resposta de segurança 401 do servidor.

@@ -1,0 +1,15 @@
+Text alignment
+    - text-align:
+        - Right: Alinha o texto para o lado direito do container pai.
+        - Left: Alinha o texto para o lado esquerdo do contêiner pai.
+        - Center: Alinha o texto com o centro horizontal do container pai.
+        - Justify: Estica o texto horizontalmente para preencher toda a largura do contêiner pai.
+
+Recuo de texto
+    - text-indent: 
+        - aceita um valor inteiro para indicar quanto a recuar a partir da borda esquerda do elemento div pai
+
+Espaçamento de texto
+    - letter-spacing: espaçamento entre as letras
+    - word-spacing: espaçamento entre as palavras
+    - Ambos aceitam um valor inteiro de pixels
